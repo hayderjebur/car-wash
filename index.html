@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Web Page</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="navigation">
+      <div class="nav-container">
+        <div class="brand">
+          <a href="#!"><img src="/logo.webp" alt="Logo" width="100px" /></a>
+        </div>
+        <nav>
+          <div class="nav-mobile">
+            <a id="navbar-toggle" href="#!"><span></span></a>
+          </div>
+          <ul class="nav-list">
+            <li>
+              <a href="#!">Home</a>
+            </li>
+            <li>
+              <a href="#!">About</a>
+            </li>
+            <li>
+              <a href="#!">Services</a>
+              <ul class="navbar-dropdown">
+                <li>
+                  <a href="#!">Sass</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#!">Portfolio</a>
+            </li>
+            <li>
+              <a href="#!">Category</a>
+              <ul class="navbar-dropdown">
+                <li>
+                  <a href="#!">Stylus</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#!">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+    <section class="hero"></section>
+    <div style="position: relative">
+      <img src="/card.jpeg" style="width: 100%; display: block" class="b-img" />
+      <!-- <div style="position: absolute; top: 0; padding: 7px">
+        <h2 class="day-status-title">Join the clean car club</h2>
+        <h3 class="day-status-sub-title">
+          "Wash your car as often as you like!"
+        </h3>
+        <div class="day-status-list">
+          <p>
+            <span class="day-status" style="background: #9cc1d9; color: #01378f"
+              >Good Day</span
+            >
+            <span class="price">$25/month</span>
+          </p>
+          <p>
+            <span class="day-status" style="background: #c0e90b; color: #01378f"
+              >Happy Day</span
+            >
+            <span class="price">$30/month</span>
+          </p>
+
+          <p>
+            <span class="day-status" style="background: #cad70a; color: #01378f"
+              >Beautiful Day</span
+            >
+            <span class="price">$35/month</span>
+          </p>
+          <p>
+            <span class="day-status" style="background: #3db20f; color: #ffffff"
+              >Fantastic Day</span
+            >
+            <span class="price">$40/month</span>
+          </p>
+        </div>
+      </div> -->
+    </div>
+  </body>
+</html>
+<style>
+  body {
+    /* margin: 0 5rem; */
+    font-family: Arial, sans-serif;
+  }
+
+  .day-status-container {
+    text-align: center;
+    margin: 0;
+    border: 1px solid #0b7bc2;
+    border-radius: 12px;
+    background-color: #0b7bc2;
+    padding: 5px 10px;
+    /* width: 60%; */
+    margin: 1px auto;
+  }
+  .day-status-title {
+    font-size: 34px;
+    margin: 0;
+    font-family: 'Changa One', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #dec10b;
+  }
+  .day-status-sub-title {
+    font-size: 18px;
+    margin: 0;
+    font-family: 'Changa One', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #dec10b;
+  }
+  .day-status-list {
+    text-align: left;
+  }
+  .day-status {
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-top: 1.5rem;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 5px;
+    color: #0b7bc2;
+  }
+  .price {
+    color: #ffffff;
+  }
+  .hero {
+    background: url('./hero3.png') no-repeat center top/cover;
+    overflow: hidden;
+    top: 0px;
+    height: 277px;
+    width: 100%;
+    border-radius: 50px;
+  }
+
+  .b-img {
+    border-radius: 5px;
+  }
+  .hero-car {
+    position: absolute;
+
+    top: 0;
+    width: 100%;
+    /* Soft edge fade */
+    mask-image: linear-gradient(to left, black 70%, transparent);
+    -webkit-mask-image: linear-gradient(to left, black 87%, transparent);
+  }
+
+  .hero-inner {
+    background-image: linear-gradient(135deg, #4199fe, #01378f);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    top: 176px;
+    left: 5rem;
+    z-index: 2;
+    font-style: italic;
+  }
+
+  /* Text */
+  .hero-text h2 {
+    /* font-size: 42px; */
+    margin-bottom: 0;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+    margin-top: 0;
+  }
+
+  /* Decorative image (NOT layout-critical) */
+  .hero-image {
+    width: 100%;
+    max-width: 520px;
+    justify-self: end;
+  }
+
+  /* Curves */
+  .curve {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    fill: white;
+    z-index: 9;
+  }
+
+  .curve-top {
+    top: -31px;
+  }
+
+  .curve-bottom {
+    bottom: 0;
+  }
+
+  /* NNavbar */
+
+  .navigation {
+    height: 55px;
+    /* background: linear-gradient(45deg, #4199fe, #74b4fe); */
+  }
+  .brand {
+    position: absolute;
+    padding-left: 38px;
+    z-index: 9999;
+  }
+  .brand a,
+  .brand a:visited {
+    color: #4199fe;
+    text-decoration: none;
+  }
+  .nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  nav {
+    float: right;
+  }
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  nav ul li {
+    float: left;
+    position: relative;
+  }
+  nav ul li a,
+  nav ul li a:visited {
+    display: block;
+    padding: 0 20px;
+    line-height: 55px;
+    color: #4199fe;
+    background: #262626;
+    text-decoration: none;
+  }
+  nav ul li a {
+    background: transparent;
+    color: #fff;
+  }
+  nav ul li a:hover,
+  nav ul li a:visited:hover {
+    background: #2581dc;
+    color: #ffffff;
+  }
+  .navbar-dropdown li a {
+    background: #2581dc;
+  }
+  nav ul li a:not(:only-child):after,
+  nav ul li a:visited:not(:only-child):after {
+    padding-left: 4px;
+    content: ' \025BE';
+  }
+  nav ul li ul li {
+    min-width: 190px;
+  }
+  nav ul li ul li a {
+    padding: 15px;
+    line-height: 20px;
+  }
+  .navbar-dropdown {
+    position: absolute;
+    display: none;
+    z-index: 1;
+    background: #fff;
+    box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.25);
+  }
+  /* Mobile navigation */
+  .nav-mobile {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: transparent;
+    height: 55px;
+    width: 70px;
+  }
+  @media only screen and (max-width: 800px) {
+    body {
+      margin: 0 0.5rem;
+    }
+    .hero-inner img {
+      width: 100%;
+    }
+    .nav-mobile {
+      display: block;
+    }
+    nav {
+      width: 100%;
+      padding: 55px 0 15px;
+    }
+    nav ul {
+      display: none;
+    }
+    nav ul li {
+      float: none;
+    }
+    nav ul li a {
+      padding: 15px;
+      line-height: 20px;
+      background: #262626;
+    }
+    nav ul li ul li a {
+      padding-left: 30px;
+    }
+    .navbar-dropdown {
+      position: static;
+    }
+  }
+  @media screen and (min-width: 800px) {
+    .nav-list {
+      display: block !important;
+    }
+  }
+  #navbar-toggle {
+    position: absolute;
+    left: 18px;
+    top: 15px;
+    cursor: pointer;
+    padding: 10px 35px 16px 0px;
+  }
+  #navbar-toggle span,
+  #navbar-toggle span:before,
+  #navbar-toggle span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 3px;
+    width: 30px;
+    background: #0b7bc2;
+    position: absolute;
+    display: block;
+    content: '';
+    transition: all 300ms ease-in-out;
+  }
+  #navbar-toggle span:before {
+    top: -10px;
+  }
+  #navbar-toggle span:after {
+    bottom: -10px;
+  }
+  #navbar-toggle.active span {
+    background-color: transparent;
+  }
+  #navbar-toggle.active span:before,
+  #navbar-toggle.active span:after {
+    top: 0;
+  }
+  #navbar-toggle.active span:before {
+    transform: rotate(45deg);
+  }
+  #navbar-toggle.active span:after {
+    transform: rotate(-45deg);
+  }
+</style>
+<script>
+  (function ($) {
+    $(function () {
+      //  open and close nav
+      $('#navbar-toggle').click(function () {
+        $('nav ul').slideToggle();
+      });
+
+      // Hamburger toggle
+      $('#navbar-toggle').on('click', function () {
+        this.classList.toggle('active');
+      });
+
+      // If a link has a dropdown, add sub menu toggle.
+      $('nav ul li a:not(:only-child)').click(function (e) {
+        $(this).siblings('.navbar-dropdown').slideToggle('slow');
+
+        // Close dropdown when select another dropdown
+        $('.navbar-dropdown').not($(this).siblings()).hide('slow');
+        e.stopPropagation();
+      });
+
+      // Click outside the dropdown will remove the dropdown class
+      $('html').click(function () {
+        $('.navbar-dropdown').hide();
+      });
+    });
+  })(jQuery);
+</script>

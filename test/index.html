@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="cartDrawer" class="cartDrawer">
+      <div class="cartDrawer-overlay" data-cart-drawer-close></div>
+
+      <aside class="cartDrawer-panel">
+        <button class="cartDrawer-close" data-cart-drawer-close>✕</button>
+
+        <div class="cartDrawer-content">
+          <!-- cart/preview HTML will be injected here -->
+        </div>
+      </aside>
+    </div>
+  </body>
+</html>
+
+<style>
+  .cartDrawer {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    pointer-events: none;
+
+    &.is-open {
+      pointer-events: auto;
+    }
+  }
+
+  .cartDrawer-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .cartDrawer.is-open .cartDrawer-overlay {
+    opacity: 1;
+  }
+
+  .cartDrawer-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 420px;
+    max-width: 100%;
+    height: 100%;
+    background: #fff;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+  }
+
+  .cartDrawer.is-open .cartDrawer-panel {
+    transform: translateX(0);
+  }
+
+  .cartDrawer-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+</style>
+<script>
+  class CartDrawer {
+    constructor() {
+      this.$drawer = $('#cartDrawer');
+      this.$content = this.$drawer.find('.cartDrawer-content');
+
+      $('[data-cart-drawer-close]').on('click', () => this.close());
+    }
+
+    open() {
+      this.$drawer.addClass('is-open');
+    }
+
+    close() {
+      this.$drawer.removeClass('is-open');
+    }
+
+    updateContent(html) {
+      this.$content.html(html);
+    }
+  }
+</script>
