@@ -49,13 +49,13 @@
       <section class="hero">
         <img src="./hero2.png" alt="Car Wash Hero" class="hero-img" />
       </section>
-      <div style="position: relative">
+      <!-- <div style="position: relative">
         <img
           src="/card.jpeg"
           style="width: 100%; display: block"
           class="b-img"
-        />
-        <!-- <div style="position: absolute; top: 0; padding: 7px">
+        /> -->
+      <!-- <div style="position: absolute; top: 0; padding: 7px">
         <h2 class="day-status-title">Join the clean car club</h2>
         <h3 class="day-status-sub-title">
           "Wash your car as often as you like!"
@@ -88,7 +88,127 @@
           </p>
         </div>
       </div> -->
+      <!-- </div> -->
+      <div style="display: flex">
+        <section
+          style="flex: 1; margin-right: 8px"
+          class="day-status-container"
+        >
+          <h2 class="day-status-title">One membership, two locations</h2>
+          <h3 class="day-status-sub-title">Join the clean car club</h3>
+        </section>
+        <section style="flex: 2" class="day-status-container">
+          <div class="day-status-list">
+            <p>
+              <span class="day-status" style="color: #9cc1d9">Good Day</span>
+              <span class="price">$12/month</span>
+            </p>
+            <p>
+              <span class="day-status" style="color: #c0e90b">Happy Day</span>
+              <span class="price">$14/month</span>
+            </p>
+
+            <p>
+              <span class="day-status" style="color: #cad70a"
+                >Beautiful Day</span
+              >
+              <span class="price">$16/month</span>
+            </p>
+            <p>
+              <span class="day-status" style="color: #3db20f"
+                >Fantastic Day</span
+              >
+              <span class="price">$18/month</span>
+            </p>
+          </div>
+        </section>
       </div>
+      <section>
+        <h2
+          style="
+            text-align: center;
+            font-family: 'Changa One', sans-serif;
+            color: #0b7bc2;
+          "
+        >
+          Welcome to Our Car Wash!
+        </h2>
+        <p style="text-align: center; font-size: 18px">
+          At our car wash, we take pride in providing top-notch services to keep
+          your vehicle looking its best. Whether you need a quick exterior wash
+          or a full-service detailing, our team of experienced professionals is
+          here to help. We use only the highest quality products and equipment
+          to ensure that your car receives the care it deserves. Come visit us
+          today and experience the difference!
+        </p>
+      </section>
+      <section>
+        <div>
+          <img
+            src="./images.jpg"
+            alt="Welcome to Our Car Wash"
+            style="width: 100%; display: block; border-radius: 5px"
+          />
+        </div>
+      </section>
+      <section>
+        <h2
+          style="
+            text-align: center;
+            font-family: 'Changa One', sans-serif;
+            color: #0b7bc2;
+          "
+        >
+          About Us
+        </h2>
+        <p style="text-align: center; font-size: 18px">
+          We are a family-owned car wash business dedicated to providing
+          top-notch services to our customers. With years of experience in the
+          industry, we take pride in delivering exceptional results and ensuring
+          customer satisfaction. Our team of skilled professionals uses
+          high-quality products and state-of-the-art equipment to give your car
+          the care it deserves. Whether you need a quick wash or a full-service
+          detailing, we have you covered!
+        </p>
+      </section>
+      <section>
+        <h2
+          style="
+            text-align: center;
+            font-family: 'Changa One', sans-serif;
+            color: #0b7bc2;
+          "
+        >
+          Our Services
+        </h2>
+        <p style="text-align: center; font-size: 18px">
+          We offer a wide range of car wash services to meet your needs. From
+          basic exterior washes to full-service detailing, we have you covered.
+          Our team of experienced professionals uses high-quality products and
+          state-of-the-art equipment to ensure your car looks its best. Whether
+          you need a quick wash or a thorough cleaning, we have the perfect
+          service for you!
+        </p>
+      </section>
+
+      <section style="margin-top: 2rem">
+        <h2
+          style="
+            text-align: center;
+            font-family: 'Changa One', sans-serif;
+            color: #0b7bc2;
+          "
+        >
+          Why Choose Us?
+        </h2>
+        <p style="text-align: center; font-size: 18px">
+          We are committed to providing the best car wash experience in town.
+          Our team of professionals uses high-quality products and
+          state-of-the-art equipment to ensure your car looks its best. With our
+          convenient location and affordable pricing, there's no reason not to
+          give us a try!
+        </p>
+      </section>
     </div>
   </body>
 </html>
@@ -105,16 +225,27 @@
   .day-status-container {
     text-align: center;
     margin: 0;
-    border: 1px solid #0b7bc2;
+    /* border: 1px solid #0b7bc2; */
     border-radius: 12px;
-    background-color: #0b7bc2;
+    /* background-color: #0b7bc2; */
+    background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(9, 9, 121, 1) 35% /* rgba(0, 212, 255, 1) 100% */
+    );
+    background: linear-gradient(
+      90deg,
+      #01378f 0%,
+      #0b7bc2 35% /* rgba(0, 212, 255, 1) 100% */
+    );
     padding: 5px 10px;
     /* width: 60%; */
     margin: 1px auto;
   }
   .day-status-title {
-    font-size: 34px;
+    font-size: 25px;
     margin: 0;
+    padding-bottom: 10px;
     font-family: 'Changa One', sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -142,6 +273,7 @@
   }
   .price {
     color: #ffffff;
+    font-family: 'Changa One', sans-serif;
   }
   .hero {
     /* background: url('./hero2.png') no-repeat center center / cover; */
@@ -175,53 +307,11 @@
     -webkit-mask-image: linear-gradient(to left, black 87%, transparent);
   }
 
-  /* .hero-inner {
-    background-image: linear-gradient(135deg, #4199fe, #01378f);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
-    position: absolute;
-    top: 176px;
-    left: 5rem;
-    z-index: 2;
-    font-style: italic;
-  } */
-
   /* Text */
   .hero-text h2 {
     /* font-size: 42px; */
     margin-bottom: 0;
   }
-
-  /* .hero-text p {
-    font-size: 16px;
-    margin-top: 0;
-  } */
-
-  /* .hero-image {
-    width: 100%;
-    max-width: 520px;
-    justify-self: end;
-  } */
-
-  /* Curves */
-  /* .curve {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 120px;
-    fill: white;
-    z-index: 9;
-  } */
-
-  /* .curve-top {
-    top: -31px;
-  }
-
-  .curve-bottom {
-    bottom: 0;
-  } */
 
   /* NNavbar */
 
@@ -250,7 +340,7 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    background: url('./b22.png') no-repeat center center/cover;
+    background: url('./bb.png') no-repeat center center/cover;
     border-radius: 8px;
     margin-top: 43px;
   }
@@ -312,12 +402,12 @@
     body {
       margin: 0 0.5rem;
     }
-    .hero {
-      min-height: 35vh;
-      height: fit-content;
+    .nav-container .brand img {
+      height: 90px;
     }
-    .hero-inner img {
-      width: 100%;
+    .hero {
+      min-height: 31vh;
+      height: fit-content;
     }
     .nav-mobile {
       display: block;
