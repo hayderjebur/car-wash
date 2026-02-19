@@ -89,14 +89,18 @@
         </div>
       </div> -->
       <!-- </div> -->
-      <div style="display: flex">
-        <section
+      <div style="text-align: center">
+        <section style="flex: 1; margin-right: 8px" class="day-status-contai">
+          <h2 class="day-status-title">One membership, two locations</h2>
+          <h3 class="day-status-sub-title">Join the clean car club</h3>
+        </section>
+        <!-- <section
           style="flex: 1; margin-right: 8px"
           class="day-status-container"
         >
           <h2 class="day-status-title">One membership, two locations</h2>
           <h3 class="day-status-sub-title">Join the clean car club</h3>
-        </section>
+        </section> -->
         <section style="flex: 2" class="day-status-container">
           <div class="day-status-list">
             <p>
@@ -277,15 +281,14 @@
   }
   .hero {
     /* background: url('./hero2.png') no-repeat center center / cover; */
-    min-height: 75vh; /* 75% of screen height */
+    /* min-height: 75vh;  */
     overflow: hidden;
     top: 0px;
     /* height: 670px; */
     width: 100%;
     border-radius: 50px;
     position: relative;
-    height: 70vh;
-
+    /* height: 70vh; */
     overflow: hidden;
   }
   .hero-img {
@@ -295,22 +298,13 @@
     border-radius: 50px;
   }
 
-  .b-img {
-    border-radius: 5px;
-  }
   .hero-car {
-    position: absolute;
+    /* position: absolute;
     top: 0;
-    width: 100%;
+    width: 100%; */
     /* Soft edge fade */
     mask-image: linear-gradient(to left, black 70%, transparent);
     -webkit-mask-image: linear-gradient(to left, black 87%, transparent);
-  }
-
-  /* Text */
-  .hero-text h2 {
-    /* font-size: 42px; */
-    margin-bottom: 0;
   }
 
   /* NNavbar */
@@ -340,7 +334,7 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    background: url('./bb.png') no-repeat center center/cover;
+    background: url('./b.jpg') no-repeat bottom center/cover;
     border-radius: 8px;
     margin-top: 43px;
   }
@@ -406,7 +400,7 @@
       height: 90px;
     }
     .hero {
-      min-height: 31vh;
+      /* min-height: 31vh; */
       height: fit-content;
     }
     .nav-mobile {
@@ -429,6 +423,7 @@
     }
     nav ul li ul li a {
       padding-left: 30px;
+      color: #dec10b;
     }
     .navbar-dropdown {
       position: static;
