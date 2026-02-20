@@ -40,12 +40,14 @@
 
             <address>
               <a
-                href="https://www.google.com/maps/search/?api=1&query=810+Canyon+Del+Rey,+Monterey,+CA+93940"
+                href="https://www.google.com/maps/search/?api=1&query=1430+S+Main+St,+Salinas,+CA+93908"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="header-text"
               >
-                810 Canyon Del Rey, Monterey, CA 93940
+                <span style="color: #f79722; text-transform: uppercase"
+                  >Address:</span
+                >1430 S Main St, Salinas, CA 93908
               </a>
             </address>
           </div>
@@ -118,7 +120,7 @@
       <!-- </div> -->
       <div style="display: flex">
         <section
-          style="flex: 2; margin-right: 8px"
+          style="flex: 1; margin-right: 8px"
           class="day-status-container"
         >
           <h3 class="day-status-title">Single Wash Menu</h3>
@@ -126,14 +128,7 @@
             <p>
               <span
                 class="day-status"
-                style="
-                  color: #01378f;
-                  background: linear-gradient(90deg, #a4bee6, #ebf4f5);
-                  width: 7rem;
-                  display: inline-block;
-                  text-align: center;
-                  font-family: 'Changa One', sans-serif;
-                "
+                style="background: linear-gradient(90deg, #a4bee6, #ebf4f5)"
                 >Good Day</span
               >
               <span class="price">$12</span>
@@ -141,14 +136,7 @@
             <p>
               <span
                 class="day-status"
-                style="
-                  color: #01378f;
-                  background: linear-gradient(90deg, #70960c, #fafa00);
-                  width: 7rem;
-                  display: inline-block;
-                  text-align: center;
-                  font-family: 'Changa One', sans-serif;
-                "
+                style="background: linear-gradient(90deg, #70960c, #fafa00)"
                 >Happy Day</span
               >
               <span class="price">$14</span>
@@ -157,14 +145,7 @@
             <p>
               <span
                 class="day-status"
-                style="
-                  color: #01378f;
-                  background: linear-gradient(135deg, #ee5700, #eea300);
-                  width: 7rem;
-                  display: inline-block;
-                  text-align: center;
-                  font-family: 'Changa One', sans-serif;
-                "
+                style="background: linear-gradient(135deg, #ee5700, #eea300)"
               >
                 Beautiful Day</span
               >
@@ -173,15 +154,7 @@
             <p>
               <span
                 class="day-status"
-                style="
-                  color: #01378f;
-                  background: linear-gradient(90deg, #5fc52e, #6eee87);
-
-                  width: 7rem;
-                  display: inline-block;
-                  text-align: center;
-                  font-family: 'Changa One', sans-serif;
-                "
+                style="background: linear-gradient(90deg, #5fc52e, #6eee87)"
                 >Fantastic Day</span
               >
               <span class="price">$18</span>
@@ -189,11 +162,13 @@
           </div>
         </section>
         <section style="flex: 1" class="day-status-container">
-          <h2 class="day-status-title">One membership, two locations</h2>
+          <h2 style="margin-top: 2rem" class="day-status-title">
+            One membership, two locations
+          </h2>
           <h3 class="day-status-sub-title">Join the clean car club</h3>
         </section>
       </div>
-      <section>
+      <section class="" style="">
         <h2
           style="
             text-align: center;
@@ -283,6 +258,23 @@
   </body>
 </html>
 <style>
+  .showcase {
+    background: rgba(13, 110, 139, 0.75);
+    color: #fff;
+    /* height: 100vh; */
+    position: relative;
+  }
+
+  .showcase:before {
+    content: '';
+    background: url('./11.png') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
   body {
     margin: 1rem 5rem;
     font-family: Arial, sans-serif;
@@ -309,6 +301,8 @@
       #0b7bc2 35% /* rgba(0, 212, 255, 1) 100% */
     );
     background: #01378f;
+    background: url('./bb1.jpg') no-repeat center center/cover;
+    /* background: url('./bbb.png') no-repeat center center/cover; */
     padding: 5px 10px;
     /* width: 60%; */
     margin: 1px auto;
@@ -317,7 +311,7 @@
   }
   .day-status-title {
     font-size: 25px;
-    margin: 0;
+    margin: 0 0 1rem;
     padding-bottom: 10px;
     font-family: 'Changa One', sans-serif;
     font-weight: 400;
@@ -338,15 +332,19 @@
   .day-status {
     font-weight: bold;
     margin-bottom: 0;
-    /* margin-top: 1.5rem; */
-    /* border: 1px solid; */
     border-radius: 5px;
     padding: 5px;
-    color: #0b7bc2;
+    color: #01378f;
+    width: 8rem;
+    font-size: 20px;
+    display: inline-block;
+    text-align: center;
+    font-family: 'Changa One', sans-serif;
   }
   .price {
     color: #dec10b;
     font-family: 'Changa One', sans-serif;
+    font-size: 20px;
   }
 
   .header-text {
