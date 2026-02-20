@@ -22,30 +22,51 @@
               ><img src="/logo.webp" alt="Logo" width="100px" height="100px"
             /></a>
           </div>
-          <nav>
-            <div class="nav-mobile">
-              <a id="navbar-toggle" href="#!"><span></span></a>
-            </div>
-            <ul class="nav-list">
-              <li>
-                <a href="#!">Home</a>
-              </li>
-              <li>
-                <a href="#!">Membership</a>
-              </li>
-              <li>
-                <a href="#!">Services</a>
-              </li>
-              <li>
-                <a href="#!">Category</a>
-              </li>
-              <li>
-                <a href="#!">Contact</a>
-              </li>
-            </ul>
-          </nav>
+          <div>
+            <a href="tel:+1(818)574-3835">
+              <span class="header-text"
+                ><span style="color: #f79722">Phone:</span> 831-772-6902</span
+              >
+            </a>
+            <p style="margin: 2px" class="header-text">
+              <span style="color: #f79722">Open Days:</span> 6:30 AM - 6:30 PM
+            </p>
+
+            <address>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=810+Canyon+Del+Rey,+Monterey,+CA+93940"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="header-text"
+              >
+                810 Canyon Del Rey, Monterey, CA 93940
+              </a>
+            </address>
+          </div>
         </div>
       </section>
+      <nav>
+        <div class="nav-mobile">
+          <a id="navbar-toggle" href="#!"><span></span></a>
+        </div>
+        <ul class="nav-list">
+          <li>
+            <a href="#!">Home</a>
+          </li>
+          <li>
+            <a href="#!">Membership</a>
+          </li>
+          <li>
+            <a href="#!">Services</a>
+          </li>
+          <li>
+            <a href="#!">Category</a>
+          </li>
+          <li>
+            <a href="#!">Contact</a>
+          </li>
+        </ul>
+      </nav>
       <section class="hero">
         <img src="./hero2.png" alt="Car Wash Hero" class="hero-img" />
       </section>
@@ -91,13 +112,10 @@
       <!-- </div> -->
       <div style="display: flex">
         <section
-          style="flex: 1; margin-right: 8px"
+          style="flex: 2; margin-right: 8px"
           class="day-status-container"
         >
-          <h2 class="day-status-title">One membership, two locations</h2>
-          <h3 class="day-status-sub-title">Join the clean car club</h3>
-        </section>
-        <section style="flex: 2" class="day-status-container">
+          <h3 class="day-status-title">Single Wash Menu</h3>
           <div class="day-status-list">
             <p>
               <span class="day-status" style="color: #9cc1d9">Good Day</span>
@@ -121,6 +139,10 @@
               <span class="price">$18</span>
             </p>
           </div>
+        </section>
+        <section style="flex: 1" class="day-status-container">
+          <h2 class="day-status-title">One membership, two locations</h2>
+          <h3 class="day-status-sub-title">Join the clean car club</h3>
         </section>
       </div>
       <section>
@@ -275,6 +297,12 @@
     color: #ffffff;
     font-family: 'Changa One', sans-serif;
   }
+  .header-text {
+    font-size: 12px;
+    font-family: 'Changa One', sans-serif;
+    color: #0b7bc3;
+    cursor: pointer;
+  }
   .hero {
     /* background: url('./hero2.png') no-repeat center center / cover; */
     /* min-height: 75vh;  */
@@ -310,8 +338,8 @@
     /* background: linear-gradient(45deg, #4199fe, #74b4fe); */
   }
   .brand {
-    position: absolute;
-    padding-left: 38px;
+    /* position: absolute; */
+    padding-left: 20px;
     z-index: 9999;
   }
   .brand a,
@@ -320,6 +348,7 @@
     text-decoration: none;
   }
   .nav-container {
+    display: flex;
     max-width: 1000px;
     margin: 0 auto;
   }
@@ -332,7 +361,7 @@
     padding: 0;
     background: url('./b1.jpg') no-repeat bottom center/cover;
     border-radius: 8px;
-    margin-top: 43px;
+    margin-top: 21px;
   }
   nav ul li {
     float: left;
@@ -351,11 +380,11 @@
     background: transparent;
     color: #fff;
   }
-  nav ul li a:hover,
+  /* nav ul li a:hover,
   nav ul li a:visited:hover {
     background: #2581dc;
     color: #ffffff;
-  }
+  } */
   .navbar-dropdown li a {
     background: #2581dc;
   }
@@ -393,7 +422,7 @@
       margin: 0 0.5rem;
     }
     .nav-container .brand img {
-      height: 90px;
+      height: 70px;
     }
     .hero {
       /* min-height: 31vh; */
@@ -404,7 +433,8 @@
     }
     nav {
       width: 100%;
-      padding: 58px 0 15px;
+      padding: 0;
+      /* padding: 58px 0 15px; */
     }
     nav ul {
       display: none;
