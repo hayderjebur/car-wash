@@ -129,17 +129,15 @@
               <span
                 class="day-status"
                 style="background: linear-gradient(90deg, #a4bee6, #ebf4f5)"
-                >Good Day</span
+                >Good Day: <span class="price">$12</span></span
               >
-              <span class="price">$12</span>
             </p>
             <p>
               <span
                 class="day-status"
                 style="background: linear-gradient(90deg, #70960c, #fafa00)"
-                >Happy Day</span
+                >Happy Day: <span class="price">$14</span></span
               >
-              <span class="price">$14</span>
             </p>
 
             <p>
@@ -147,17 +145,15 @@
                 class="day-status"
                 style="background: linear-gradient(135deg, #ee5700, #eea300)"
               >
-                Beautiful Day</span
+                Beautiful Day: <span class="price">$16</span></span
               >
-              <span class="price">$16</span>
             </p>
             <p>
               <span
                 class="day-status"
                 style="background: linear-gradient(90deg, #5fc52e, #6eee87)"
-                >Fantastic Day</span
+                >Fantastic Day: <span class="price">$18</span></span
               >
-              <span class="price">$18</span>
             </p>
           </div>
         </section>
@@ -302,7 +298,10 @@
     );
     background: #01378f;
     background: url('./bb1.jpg') no-repeat center center/cover;
-    /* background: url('./bbb.png') no-repeat center center/cover; */
+    background: url('./bbb.png') no-repeat center center/cover;
+    background: url('./bb.jpg') no-repeat center center/cover;
+    /* background: url('./bb.webp') no-repeat center center/cover;
+    background: url('./bb.png') no-repeat center center/cover; */
     padding: 5px 10px;
     /* width: 60%; */
     margin: 1px auto;
@@ -335,14 +334,15 @@
     border-radius: 5px;
     padding: 5px;
     color: #01378f;
-    width: 8rem;
+    width: 11rem;
     font-size: 20px;
     display: inline-block;
-    text-align: center;
+    text-align: left;
     font-family: 'Changa One', sans-serif;
   }
   .price {
     color: #dec10b;
+    color: rgba(9, 9, 121, 1);
     font-family: 'Changa One', sans-serif;
     font-size: 20px;
   }
