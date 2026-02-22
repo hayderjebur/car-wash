@@ -53,28 +53,6 @@
           </div>
         </div>
       </section>
-      <nav>
-        <div class="nav-mobile">
-          <a id="navbar-toggle" href="#!"><span></span></a>
-        </div>
-        <ul class="nav-list">
-          <li>
-            <a href="#!">Home</a>
-          </li>
-          <li>
-            <a href="#!">Membership</a>
-          </li>
-          <li>
-            <a href="#!">Services</a>
-          </li>
-          <li>
-            <a href="#!">Category</a>
-          </li>
-          <li>
-            <a href="#!">Contact</a>
-          </li>
-        </ul>
-      </nav>
       <section class="hero">
         <img src="./hero2.png" alt="Car Wash Hero" class="hero-img" />
       </section>
@@ -118,21 +96,21 @@
         </div>
       </div> -->
       <!-- </div> -->
-      <div style="display: flex">
+      <div class="card-wrapper" style="display: flex">
         <section
           style="flex: 1; margin-right: 8px"
           class="day-status-container"
         >
           <h3 class="day-status-title">Single Wash Menu</h3>
           <div class="day-status-list">
-            <p>
+            <p class="info-btn" data-content="good-day">
               <span
                 class="day-status"
                 style="background: linear-gradient(90deg, #a4bee6, #ebf4f5)"
                 >Good Day: <span class="price">$12</span></span
               >
             </p>
-            <p>
+            <p class="info-btn" data-content="happy-day">
               <span
                 class="day-status"
                 style="background: linear-gradient(90deg, #70960c, #fafa00)"
@@ -140,7 +118,7 @@
               >
             </p>
 
-            <p>
+            <p class="info-btn" data-content="beautiful-day">
               <span
                 class="day-status"
                 style="background: linear-gradient(135deg, #ee5700, #eea300)"
@@ -148,7 +126,7 @@
                 Beautiful Day: <span class="price">$16</span></span
               >
             </p>
-            <p>
+            <p class="info-btn" data-content="fantastic-day">
               <span
                 class="day-status"
                 style="background: linear-gradient(90deg, #5fc52e, #6eee87)"
@@ -157,13 +135,28 @@
             </p>
           </div>
         </section>
-        <section style="flex: 1" class="day-status-container">
-          <h2 style="margin-top: 2rem" class="day-status-title">
-            One membership, two locations
-          </h2>
-          <h3 class="day-status-sub-title">Join the clean car club</h3>
-        </section>
+        <div class="flip-card" style="flex: 1">
+          <div class="flip-card-inner" id="flipCard">
+            <section class="flip-card-container">
+              <!-- RIGHT SIDE FLIP CARD -->
+
+              <!-- FRONT -->
+              <div class="flip-card-front">
+                <h2 style="margin-top: 2rem" class="day-status-title">
+                  Fantastic Day
+                </h2>
+                <h3 class="day-status-sub-title">Includes:</h3>
+              </div>
+            </section>
+            <!-- BACK -->
+            <div class="flip-card-back" id="cardContent">
+              <h3 id="cardTitle">Back Side</h3>
+              <p id="cardText">More information here</p>
+            </div>
+          </div>
+        </div>
       </div>
+
       <section class="" style="">
         <h2
           style="
@@ -254,23 +247,6 @@
   </body>
 </html>
 <style>
-  .showcase {
-    background: rgba(13, 110, 139, 0.75);
-    color: #fff;
-    /* height: 100vh; */
-    position: relative;
-  }
-
-  .showcase:before {
-    content: '';
-    background: url('./11.png') no-repeat center center/cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-  }
   body {
     margin: 1rem 5rem;
     font-family: Arial, sans-serif;
@@ -282,31 +258,30 @@
 
   .day-status-container {
     text-align: center;
+    height: 100%;
     margin: 0;
-    /* border: 1px solid #0b7bc2; */
     border-radius: 12px;
-    /* background-color: #0b7bc2; */
     background: linear-gradient(
       90deg,
       rgba(2, 0, 36, 1) 0%,
       rgba(9, 9, 121, 1) 35% /* rgba(0, 212, 255, 1) 100% */
     );
-    background: linear-gradient(
-      90deg,
-      #01378f 0%,
-      #0b7bc2 35% /* rgba(0, 212, 255, 1) 100% */
-    );
-    background: #01378f;
-    background: url('./bb1.jpg') no-repeat center center/cover;
-    background: url('./bbb.png') no-repeat center center/cover;
-    background: url('./bb.jpg') no-repeat center center/cover;
-    /* background: url('./bb.webp') no-repeat center center/cover;
-    background: url('./bb.png') no-repeat center center/cover; */
-    padding: 5px 10px;
-    /* width: 60%; */
+    padding: 0px 10px;
     margin: 1px auto;
     box-shadow: 0.5rem 0.5rem 1rem rgba(51, 51, 51, 0.2);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  .flip-card-container {
+    height: 100%;
+    padding: 0px 10px;
+    margin: 1px auto;
+    border-radius: 12px;
+    background: #01378f;
+    /* background: linear-gradient(90deg, #5fc52e, #6eee87); */
+
+    box-shadow: 0.5rem 0.5rem 1rem rgba(51, 51, 51, 0.2);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    text-align: center;
   }
   .day-status-title {
     font-size: 25px;
@@ -315,7 +290,7 @@
     font-family: 'Changa One', sans-serif;
     font-weight: 400;
     font-style: normal;
-    color: #dec10b;
+    color: #fff;
   }
   .day-status-sub-title {
     font-size: 18px;
@@ -323,7 +298,7 @@
     font-family: 'Changa One', sans-serif;
     font-weight: 400;
     font-style: normal;
-    color: #dec10b;
+    color: #fff;
   }
   .day-status-list {
     text-align: left;
@@ -402,71 +377,6 @@
     max-width: 1000px;
     margin: 0 auto;
   }
-  nav {
-    float: right;
-  }
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    background: url('./b1.jpg') no-repeat bottom center/cover;
-    border-radius: 8px;
-    margin-top: 21px;
-  }
-  nav ul li {
-    float: left;
-    position: relative;
-  }
-  nav ul li a,
-  nav ul li a:visited {
-    display: block;
-    padding: 0 20px;
-    line-height: 55px;
-    color: #4199fe;
-    background: #262626;
-    text-decoration: none;
-  }
-  nav ul li a {
-    background: transparent;
-    color: #fff;
-  }
-  /* nav ul li a:hover,
-  nav ul li a:visited:hover {
-    background: #2581dc;
-    color: #ffffff;
-  } */
-  .navbar-dropdown li a {
-    background: #2581dc;
-  }
-  nav ul li a:not(:only-child):after,
-  nav ul li a:visited:not(:only-child):after {
-    padding-left: 4px;
-    content: ' \025BE';
-  }
-  nav ul li ul li {
-    min-width: 190px;
-  }
-  nav ul li ul li a {
-    padding: 15px;
-    line-height: 20px;
-  }
-  .navbar-dropdown {
-    position: absolute;
-    display: none;
-    z-index: 1;
-    background: #fff;
-    box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.25);
-  }
-  /* Mobile navigation */
-  .nav-mobile {
-    display: none;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: transparent;
-    height: 55px;
-    width: 70px;
-  }
   @media only screen and (max-width: 800px) {
     body {
       margin: 0 0.5rem;
@@ -478,88 +388,79 @@
       /* min-height: 31vh; */
       height: fit-content;
     }
-    .nav-mobile {
-      display: block;
-    }
-    nav {
-      width: 100%;
-      padding: 0;
-      /* padding: 58px 0 15px; */
-    }
-    nav ul {
-      display: none;
-    }
-    nav ul li {
-      float: none;
-    }
-    nav ul li a {
-      padding: 15px;
-      line-height: 20px;
-      /* background: linear-gradient(90deg, #595cff, #c6f8ff); */
-    }
-    nav ul li a,
-    nav ul li a:visited {
-      color: #dec10b;
-    }
-    nav ul li ul li a {
-      padding-left: 30px;
-      color: #dec10b;
-    }
-    .navbar-dropdown {
-      position: static;
-    }
   }
-  @media screen and (min-width: 800px) {
-    .nav-list {
-      display: block !important;
-    }
+
+  .card-wrapper {
+    /* display: flex;
+    gap: 40px;
+    align-items: center;
+    font-family: Arial, sans-serif; */
   }
-  #navbar-toggle {
+
+  /* LEFT SIDE */
+  .left-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* .info-btn:hover {
+    background: #2980b9;
+  } */
+
+  /* RIGHT SIDE FLIP CARD */
+  .flip-card {
+    perspective: 1000px;
+  }
+
+  .flip-card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front,
+  .flip-card-back {
     position: absolute;
-    left: 18px;
-    top: 15px;
-    cursor: pointer;
-    padding: 10px 35px 16px 0px;
-  }
-  #navbar-toggle span,
-  #navbar-toggle span:before,
-  #navbar-toggle span:after {
-    cursor: pointer;
-    border-radius: 1px;
-    height: 3px;
-    width: 30px;
-    background: #0b7bc2;
-    position: absolute;
-    display: block;
-    content: '';
-    transition: all 300ms ease-in-out;
-  }
-  #navbar-toggle span:before {
-    top: -10px;
-  }
-  #navbar-toggle span:after {
-    bottom: -10px;
-  }
-  #navbar-toggle.active span {
-    background-color: transparent;
-  }
-  #navbar-toggle.active span:before,
-  #navbar-toggle.active span:after {
     top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding: 20px; */
   }
-  #navbar-toggle.active span:before {
-    transform: rotate(45deg);
+
+  .flip-card-front {
+    /* background: #ecf0f1; */
+    /* background: url(./bbb.png) no-repeat center center / cover; */
   }
-  #navbar-toggle.active span:after {
-    transform: rotate(-45deg);
+  .flip-card-back {
+    background: linear-gradient(90deg, #5fc52e, #6eee87);
+    color: white;
+    transform: rotateY(180deg);
   }
 </style>
 <script>
   (function ($) {
     $(function () {
       //  open and close nav
-      $('#navbar-toggle').click(function () {
-        $('nav ul').slideToggle();
+      $('#fantastic-day').click(function () {
+        $('.day-status-sub-title').html(
+          'Have a fantastic day with our premium car wash service!',
+        );
       });
 
       // Hamburger toggle
@@ -582,4 +483,62 @@
       });
     });
   })(jQuery);
+</script>
+<script>
+  const buttons = document.querySelectorAll('.info-btn');
+  const flipCard = document.querySelector('.flip-card');
+  const flipCardFront = document.querySelector('.flip-card-front');
+  const flipCardBack = document.querySelector('.flip-card-back');
+  const cardTitle = document.getElementById('cardTitle');
+  const cardText = document.getElementById('cardText');
+
+  const contentData = {
+    'good-day': { title: 'Title 1', text: 'This is content for Button 1.' },
+    'happy-day': { title: 'Title 2', text: 'This is content for Button 2.' },
+    'beautiful-day': {
+      title: 'Title 3',
+      text: 'This is content for Button 3.',
+    },
+    'fantastic-day': {
+      title: 'Title 4',
+      text: 'This is content for Button 4.',
+    },
+  };
+  let isFlipped = false;
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const key = button.getAttribute('data-content');
+      cardTitle.textContent = contentData[key].title;
+      cardText.textContent = contentData[key].text;
+      flipCard.classList.remove('flipped');
+      void flipCard.offsetWidth; // force reflow (important!)
+      if (key === 'good-day') {
+        flipCardBack.style.background =
+          'linear-gradient(90deg, #a4bee6, #ebf4f5)';
+        flipCardFront.style.background =
+          'linear-gradient(90deg, #a4bee6, #ebf4f5)';
+      } else if (key === 'happy-day') {
+        flipCardBack.style.background =
+          'linear-gradient(90deg, #70960c, #fafa00)';
+        flipCardFront.style.background =
+          'linear-gradient(90deg, #70960c, #fafa00)';
+      } else if (key === 'beautiful-day') {
+        flipCardBack.style.background =
+          'linear-gradient(135deg, #ee5700, #eea300)';
+        flipCardFront.style.background =
+          'linear-gradient(135deg, #ee5700, #eea300)';
+      } else if (key === 'fantastic-day') {
+        flipCardBack.style.background =
+          'linear-gradient(90deg, #5fc52e, #6eee87)';
+        flipCardFront.style.background =
+          'linear-gradient(90deg, #5fc52e, #6eee87)';
+      }
+      if (!isFlipped) {
+        flipCard.classList.add('flipped');
+      } else {
+        flipCard.classList.remove('flipped');
+      }
+      isFlipped = !isFlipped;
+    });
+  });
 </script>
