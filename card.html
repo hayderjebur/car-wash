@@ -589,3 +589,94 @@
                   transform="translate(-5.5 -6.5)"
                 />
               </svg>
+
+              <!-- <script>
+  const buttons = document.querySelectorAll('.info-btn');
+  const flipCard = document.querySelector('.flip-card');
+  const flipCardFront = document.querySelector('.flip-card-front');
+  const flipCardBack = document.querySelector('.flip-card-back');
+  const cardTitle = document.getElementById('cardTitle');
+  const cardText = document.getElementById('cardText');
+
+  const contentData = {
+    'good-day': { title: 'Title 1', text: 'This is content for Button 1.' },
+    'happy-day': { title: 'Title 2', text: 'This is content for Button 2.' },
+    'beautiful-day': {
+      title: 'Title 3',
+      text: 'This is content for Button 3.',
+    },
+    'fantastic-day': {
+      title: 'Title 4',
+      text: 'This is content for Button 4.',
+    },
+  };
+  let isFlipped = false;
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const key = button.getAttribute('data-content');
+      cardTitle.textContent = contentData[key].title;
+      cardText.textContent = contentData[key].text;
+      flipCard.classList.remove('flipped');
+      void flipCard.offsetWidth; // force reflow (important!)
+      if (key === 'good-day') {
+        flipCardBack.style.background =
+          'linear-gradient(90deg, #a4bee6, #ebf4f5)';
+        flipCardFront.style.background =
+          'linear-gradient(90deg, #a4bee6, #ebf4f5)';
+      } else if (key === 'happy-day') {
+        flipCardBack.style.background =
+          'linear-gradient(90deg, #70960c, #fafa00)';
+        flipCardFront.style.background =
+          'linear-gradient(90deg, #70960c, #fafa00)';
+      } else if (key === 'beautiful-day') {
+        flipCardBack.style.background =
+          'linear-gradient(135deg, #ee5700, #eea300)';
+        flipCardFront.style.background =
+          'linear-gradient(135deg, #ee5700, #eea300)';
+      } else if (key === 'fantastic-day') {
+        flipCardBack.style.background =
+          'linear-gradient(90deg, #5fc52e, #6eee87)';
+        flipCardFront.style.background =
+          'linear-gradient(90deg, #5fc52e, #6eee87)';
+      }
+      if (!isFlipped) {
+        flipCard.classList.add('flipped');
+      } else {
+        flipCard.classList.remove('flipped');
+      }
+      isFlipped = !isFlipped;
+    });
+  });
+</script> -->
+
+<!-- <script>
+  (function ($) {
+    $(function () {
+      //  open and close nav
+      $('#fantastic-day').click(function () {
+        $('.day-status-sub-title').html(
+          'Have a fantastic day with our premium car wash service!',
+        );
+      });
+
+      // Hamburger toggle
+      $('#navbar-toggle').on('click', function () {
+        this.classList.toggle('active');
+      });
+
+      // If a link has a dropdown, add sub menu toggle.
+      $('nav ul li a:not(:only-child)').click(function (e) {
+        $(this).siblings('.navbar-dropdown').slideToggle('slow');
+
+        // Close dropdown when select another dropdown
+        $('.navbar-dropdown').not($(this).siblings()).hide('slow');
+        e.stopPropagation();
+      });
+
+      // Click outside the dropdown will remove the dropdown class
+      $('html').click(function () {
+        $('.navbar-dropdown').hide();
+      });
+    });
+  })(jQuery);
+</script> -->

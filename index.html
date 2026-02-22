@@ -102,6 +102,7 @@
           class="day-status-container"
         >
           <h3 class="day-status-title">Single Wash Menu</h3>
+
           <div class="day-status-list">
             <p class="info-btn" data-content="good-day">
               <span
@@ -135,24 +136,41 @@
             </p>
           </div>
         </section>
-        <div class="flip-card" style="flex: 1">
+        <div style="flex: 1">
           <div class="flip-card-inner" id="flipCard">
             <section class="flip-card-container">
-              <!-- RIGHT SIDE FLIP CARD -->
-
               <!-- FRONT -->
+              <h4
+                id="cardBadge"
+                class="info-btn day-status"
+                style="
+                  background: linear-gradient(90deg, #1fd083, #f4985a, #3877d5);
+                  text-transform: uppercase;
+                  width: 100%;
+                  margin: 0;
+                  padding: 3px 0;
+                  text-align: center;
+                "
+              >
+                Fantastic Day
+              </h4>
               <div class="flip-card-front">
-                <h2 style="margin-top: 2rem" class="day-status-title">
-                  Fantastic Day
-                </h2>
-                <h3 class="day-status-sub-title">Includes:</h3>
+                <div id="cardText" class="day-status-sub-title">
+                  <ul class="day-status-list">
+                    <li>Armor all professional</li>
+                    <li>Foam bath wash</li>
+                    <li>Wheel cleaner</li>
+                    <li>Triple Polish</li>
+                    <li>Rain-X Complete surface protectant</li>
+                    <li>
+                      Armor all professional extreme shine wax with carnauba
+                    </li>
+                    <li>Tire Shine</li>
+                    <li>Air Blow Dry</li>
+                  </ul>
+                </div>
               </div>
             </section>
-            <!-- BACK -->
-            <div class="flip-card-back" id="cardContent">
-              <h3 id="cardTitle">Back Side</h3>
-              <p id="cardText">More information here</p>
-            </div>
           </div>
         </div>
       </div>
@@ -266,6 +284,7 @@
       rgba(2, 0, 36, 1) 0%,
       rgba(9, 9, 121, 1) 35% /* rgba(0, 212, 255, 1) 100% */
     );
+    background: linear-gradient(120deg, #0d41e1, #07c8f9);
     padding: 0px 10px;
     margin: 1px auto;
     box-shadow: 0.5rem 0.5rem 1rem rgba(51, 51, 51, 0.2);
@@ -273,7 +292,7 @@
   }
   .flip-card-container {
     height: 100%;
-    padding: 0px 10px;
+    /* padding: 0px 10px; */
     margin: 1px auto;
     border-radius: 12px;
     background: #01378f;
@@ -293,15 +312,20 @@
     color: #fff;
   }
   .day-status-sub-title {
-    font-size: 18px;
-    margin: 0;
-    font-family: 'Changa One', sans-serif;
-    font-weight: 400;
+    font-size: 16px;
+    margin: 10px 0 0 16px;
+    /* font-family: 'Changa One', sans-serif; */
+    font-weight: 600;
     font-style: normal;
-    color: #fff;
+    text-transform: capitalize;
+
+    /* color: #fff; */
   }
   .day-status-list {
     text-align: left;
+    margin: 0;
+    padding: 0;
+    color: #01378f;
   }
   .day-status {
     font-weight: bold;
@@ -315,6 +339,7 @@
     text-align: left;
     font-family: 'Changa One', sans-serif;
   }
+
   .price {
     color: #dec10b;
     color: rgba(9, 9, 121, 1);
@@ -390,13 +415,6 @@
     }
   }
 
-  .card-wrapper {
-    /* display: flex;
-    gap: 40px;
-    align-items: center;
-    font-family: Arial, sans-serif; */
-  }
-
   /* LEFT SIDE */
   .left-panel {
     display: flex;
@@ -408,137 +426,102 @@
     background: #2980b9;
   } */
 
-  /* RIGHT SIDE FLIP CARD */
-  .flip-card {
-    perspective: 1000px;
-  }
-
   .flip-card-inner {
     width: 100%;
     height: 100%;
     position: relative;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-  }
-
-  .flip-card.flipped .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-
-  .flip-card-front,
-  .flip-card-back {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
-    backface-visibility: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* padding: 20px; */
   }
 
   .flip-card-front {
-    /* background: #ecf0f1; */
-    /* background: url(./bbb.png) no-repeat center center / cover; */
-  }
-  .flip-card-back {
-    background: linear-gradient(90deg, #5fc52e, #6eee87);
-    color: white;
-    transform: rotateY(180deg);
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0; */
+    /* width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    backface-visibility: hidden; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
   }
 </style>
-<script>
-  (function ($) {
-    $(function () {
-      //  open and close nav
-      $('#fantastic-day').click(function () {
-        $('.day-status-sub-title').html(
-          'Have a fantastic day with our premium car wash service!',
-        );
-      });
 
-      // Hamburger toggle
-      $('#navbar-toggle').on('click', function () {
-        this.classList.toggle('active');
-      });
-
-      // If a link has a dropdown, add sub menu toggle.
-      $('nav ul li a:not(:only-child)').click(function (e) {
-        $(this).siblings('.navbar-dropdown').slideToggle('slow');
-
-        // Close dropdown when select another dropdown
-        $('.navbar-dropdown').not($(this).siblings()).hide('slow');
-        e.stopPropagation();
-      });
-
-      // Click outside the dropdown will remove the dropdown class
-      $('html').click(function () {
-        $('.navbar-dropdown').hide();
-      });
-    });
-  })(jQuery);
-</script>
 <script>
   const buttons = document.querySelectorAll('.info-btn');
-  const flipCard = document.querySelector('.flip-card');
-  const flipCardFront = document.querySelector('.flip-card-front');
-  const flipCardBack = document.querySelector('.flip-card-back');
+  const flipCardContainer = document.querySelector('.flip-card-container');
   const cardTitle = document.getElementById('cardTitle');
   const cardText = document.getElementById('cardText');
+  const cardBadge = document.getElementById('cardBadge');
 
   const contentData = {
-    'good-day': { title: 'Title 1', text: 'This is content for Button 1.' },
-    'happy-day': { title: 'Title 2', text: 'This is content for Button 2.' },
+    'good-day': {
+      title: 'Good Day',
+      text: `<ul class="day-status-list">
+                    <li>Foam bath wash</li>
+                    <li>Air Blow Dry</li>
+      </ul>`,
+    },
+    'happy-day': {
+      title: 'Happy Day',
+      text: `<ul class="day-status-list">
+                    <li>Foam bath wash</li>
+                    <li>Wheel cleaner</li>
+                    <li>Triple Polish</li>
+                    <li>Air Blow Dry</li>
+      </ul>`,
+    },
     'beautiful-day': {
-      title: 'Title 3',
-      text: 'This is content for Button 3.',
+      title: 'Beautiful Day',
+      text: `<ul class="day-status-list">
+         <li>Foam bath wash</li>
+                    <li>Wheel cleaner</li>
+                    <li>Triple Polish</li>
+                    <li>
+                      Armor all professional extreme shine wax with carnauba
+                    </li>
+                    <li>Air Blow Dry</li>
+      </ul>`,
     },
     'fantastic-day': {
-      title: 'Title 4',
-      text: 'This is content for Button 4.',
+      title: 'Fantastic Day',
+      text: `<ul class="day-status-list">
+         <li>Armor all professional</li>
+                    <li>Foam bath wash</li>
+                    <li>Wheel cleaner</li>
+                    <li>Triple Polish</li>
+                    <li>Rain-X Complete surface protectant</li>
+                    <li>
+                      Armor all professional extreme shine wax with carnauba
+                    </li>
+                    <li>Tire Shine</li>
+                    <li>Air Blow Dry</li>
+      </ul>`,
     },
   };
-  let isFlipped = false;
+
   buttons.forEach((button) => {
     button.addEventListener('click', () => {
       const key = button.getAttribute('data-content');
-      cardTitle.textContent = contentData[key].title;
-      cardText.textContent = contentData[key].text;
-      flipCard.classList.remove('flipped');
-      void flipCard.offsetWidth; // force reflow (important!)
       if (key === 'good-day') {
-        flipCardBack.style.background =
-          'linear-gradient(90deg, #a4bee6, #ebf4f5)';
-        flipCardFront.style.background =
+        flipCardContainer.style.background =
           'linear-gradient(90deg, #a4bee6, #ebf4f5)';
       } else if (key === 'happy-day') {
-        flipCardBack.style.background =
-          'linear-gradient(90deg, #70960c, #fafa00)';
-        flipCardFront.style.background =
+        flipCardContainer.style.background =
           'linear-gradient(90deg, #70960c, #fafa00)';
       } else if (key === 'beautiful-day') {
-        flipCardBack.style.background =
-          'linear-gradient(135deg, #ee5700, #eea300)';
-        flipCardFront.style.background =
+        flipCardContainer.style.background =
           'linear-gradient(135deg, #ee5700, #eea300)';
       } else if (key === 'fantastic-day') {
-        flipCardBack.style.background =
-          'linear-gradient(90deg, #5fc52e, #6eee87)';
-        flipCardFront.style.background =
+        flipCardContainer.style.background =
           'linear-gradient(90deg, #5fc52e, #6eee87)';
       }
-      if (!isFlipped) {
-        flipCard.classList.add('flipped');
-      } else {
-        flipCard.classList.remove('flipped');
-      }
-      isFlipped = !isFlipped;
+      // cardTitle.innerHTML = contentData[key].title;
+      cardText.innerHTML = contentData[key].text;
+      // cardBadge.setAttribute('data-content', key);
+      cardBadge.innerHTML = key;
     });
   });
 </script>
