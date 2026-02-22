@@ -489,6 +489,8 @@
   const flipCard = document.querySelector('.flip-card');
   const flipCardFront = document.querySelector('.flip-card-front');
   const flipCardBack = document.querySelector('.flip-card-back');
+  const flipCardBackTitle = document.querySelector('.day-status-title');
+  const flipCardBackSubTitle = document.querySelector('.day-status-sub-title');
   const cardTitle = document.getElementById('cardTitle');
   const cardText = document.getElementById('cardText');
 
@@ -508,6 +510,8 @@
   buttons.forEach((button) => {
     button.addEventListener('click', () => {
       const key = button.getAttribute('data-content');
+      flipCardBackTitle.textContent = '';
+      flipCardBackSubTitle.textContent = '';
       cardTitle.textContent = contentData[key].title;
       cardText.textContent = contentData[key].text;
       flipCard.classList.remove('flipped');
