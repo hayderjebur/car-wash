@@ -277,7 +277,7 @@
     margin: 1px auto;
     border-radius: 12px;
     background: #01378f;
-    /* background: linear-gradient(90deg, #5fc52e, #6eee87); */
+    background: linear-gradient(90deg, #5fc52e, #6eee87);
 
     box-shadow: 0.5rem 0.5rem 1rem rgba(51, 51, 51, 0.2);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -489,8 +489,6 @@
   const flipCard = document.querySelector('.flip-card');
   const flipCardFront = document.querySelector('.flip-card-front');
   const flipCardBack = document.querySelector('.flip-card-back');
-  const flipCardBackTitle = document.querySelector('.day-status-title');
-  const flipCardBackSubTitle = document.querySelector('.day-status-sub-title');
   const cardTitle = document.getElementById('cardTitle');
   const cardText = document.getElementById('cardText');
 
@@ -510,8 +508,6 @@
   buttons.forEach((button) => {
     button.addEventListener('click', () => {
       const key = button.getAttribute('data-content');
-      flipCardBackTitle.textContent = '';
-      flipCardBackSubTitle.textContent = '';
       cardTitle.textContent = contentData[key].title;
       cardText.textContent = contentData[key].text;
       flipCard.classList.remove('flipped');
