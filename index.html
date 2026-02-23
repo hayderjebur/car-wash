@@ -104,36 +104,35 @@
           <h3 class="day-status-title">Single Wash Menu</h3>
 
           <div class="day-status-list">
-            <p class="info-btn" data-content="good-day">
-              <span
-                class="day-status"
-                style="background: linear-gradient(90deg, #a4bee6, #ebf4f5)"
-                >Good Day: <span class="price">$12</span></span
-              >
-            </p>
-            <p class="info-btn" data-content="happy-day">
-              <span
-                class="day-status"
-                style="background: linear-gradient(90deg, #70960c, #fafa00)"
-                >Happy Day: <span class="price">$14</span></span
-              >
-            </p>
+            <button
+              class="info-btn"
+              data-content="good-day"
+              style="background: linear-gradient(90deg, #a4bee6, #ebf4f5)"
+            >
+              Good Day: <span class="price">$12</span>
+            </button>
+            <button
+              class="info-btn"
+              data-content="happy-day"
+              style="background: linear-gradient(90deg, #70960c, #fafa00)"
+            >
+              Happy Day: <span class="price">$14</span>
+            </button>
 
-            <p class="info-btn" data-content="beautiful-day">
-              <span
-                class="day-status"
-                style="background: linear-gradient(135deg, #ee5700, #eea300)"
-              >
-                Beautiful Day: <span class="price">$16</span></span
-              >
-            </p>
-            <p class="info-btn" data-content="fantastic-day">
-              <span
-                class="day-status"
-                style="background: linear-gradient(90deg, #5fc52e, #6eee87)"
-                >Fantastic Day: <span class="price">$18</span></span
-              >
-            </p>
+            <button
+              class="info-btn"
+              data-content="beautiful-day"
+              style="background: linear-gradient(135deg, #ee5700, #eea300)"
+            >
+              Beautiful Day: <span class="price">$16</span>
+            </button>
+            <button
+              class="info-btn active"
+              data-content="fantastic-day"
+              style="background: linear-gradient(90deg, #5fc52e, #6eee87)"
+            >
+              Fantastic Day: <span class="price">$18</span>
+            </button>
           </div>
         </section>
         <div style="flex: 1">
@@ -144,17 +143,18 @@
                 id="cardBadge"
                 class="info-btn day-status"
                 style="
-                  background: linear-gradient(90deg, #1fd083, #f4985a, #3877d5);
+                  /* background: linear-gradient(90deg, #1fd083, #f4985a, #3877d5); */
                   text-transform: uppercase;
                   width: 100%;
                   margin: 0;
                   padding: 3px 0;
                   text-align: center;
+                  border-bottom: 2px solid #01378f;
                 "
               >
                 Fantastic Day
               </h4>
-              <div class="flip-card-front">
+              <div class="">
                 <div id="cardText" class="day-status-sub-title">
                   <ul class="day-status-list">
                     <li>Armor all professional</li>
@@ -285,6 +285,7 @@
       rgba(9, 9, 121, 1) 35% /* rgba(0, 212, 255, 1) 100% */
     );
     background: linear-gradient(120deg, #0d41e1, #07c8f9);
+    background: linear-gradient(30deg, #6d84c9 0%, #4199fe 35%);
     padding: 0px 10px;
     margin: 1px auto;
     box-shadow: 0.5rem 0.5rem 1rem rgba(51, 51, 51, 0.2);
@@ -326,6 +327,7 @@
     margin: 0;
     padding: 0;
     color: #01378f;
+    margin-bottom: 2rem;
   }
   .day-status {
     font-weight: bold;
@@ -338,6 +340,7 @@
     display: inline-block;
     text-align: left;
     font-family: 'Changa One', sans-serif;
+    cursor: pointer;
   }
 
   .price {
@@ -345,6 +348,30 @@
     color: rgba(9, 9, 121, 1);
     font-family: 'Changa One', sans-serif;
     font-size: 20px;
+  }
+  .info-btn {
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 5px;
+    color: #01378f;
+    width: 11rem;
+    font-size: 20px;
+    /* display: inline-block; */
+    text-align: left;
+    font-family: 'Changa One', sans-serif;
+    cursor: pointer;
+    border: none;
+    position: relative;
+  }
+  .day-status-list > .info-btn.active::after {
+    content: '';
+    border: 16px solid;
+    border-color: transparent transparent transparent
+      var(--arrow-color, #6eee87);
+    position: absolute;
+    top: -1px;
+    right: -37px;
   }
 
   .header-text {
@@ -358,11 +385,9 @@
     /* min-height: 75vh;  */
     overflow: hidden;
     top: 0px;
-    /* height: 670px; */
     width: 100%;
     border-radius: 50px;
     position: relative;
-    /* height: 70vh; */
     overflow: hidden;
   }
   .hero-img {
@@ -385,7 +410,6 @@
 
   .navigation {
     height: 55px;
-    /* background: linear-gradient(45deg, #4199fe, #74b4fe); */
   }
   .brand {
     /* position: absolute; */
@@ -430,22 +454,6 @@
     width: 100%;
     height: 100%;
     position: relative;
-  }
-
-  .flip-card-front {
-    /* position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0; */
-    /* width: 100%;
-    height: 100%;
-    border-radius: 12px;
-    backface-visibility: hidden; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* align-items: center; */
   }
 </style>
 
@@ -504,24 +512,30 @@
 
   buttons.forEach((button) => {
     button.addEventListener('click', () => {
+      buttons.forEach((btn) => btn.classList.remove('active'));
+      button.classList.add('active');
       const key = button.getAttribute('data-content');
       if (key === 'good-day') {
         flipCardContainer.style.background =
           'linear-gradient(90deg, #a4bee6, #ebf4f5)';
+        button.style.setProperty('--arrow-color', '#ebf4f5');
       } else if (key === 'happy-day') {
         flipCardContainer.style.background =
           'linear-gradient(90deg, #70960c, #fafa00)';
+        button.style.setProperty('--arrow-color', '#fafa00');
       } else if (key === 'beautiful-day') {
         flipCardContainer.style.background =
           'linear-gradient(135deg, #ee5700, #eea300)';
+        button.style.setProperty('--arrow-color', '#eea300');
       } else if (key === 'fantastic-day') {
         flipCardContainer.style.background =
           'linear-gradient(90deg, #5fc52e, #6eee87)';
+        button.style.setProperty('--arrow-color', '#6eee87');
       }
       // cardTitle.innerHTML = contentData[key].title;
       cardText.innerHTML = contentData[key].text;
       // cardBadge.setAttribute('data-content', key);
-      cardBadge.innerHTML = key;
+      cardBadge.innerHTML = contentData[key].title;
     });
   });
 </script>
