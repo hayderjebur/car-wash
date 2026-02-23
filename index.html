@@ -520,18 +520,22 @@
   .reveal-left,
   .reveal-right {
     opacity: 0;
-    transition: all 0.8s ease;
+    transform: translateX(0); /* reset */
+    transition:
+      transform 0.8s ease,
+      opacity 0.8s ease;
   }
 
+  /* Initial hidden positions */
   .reveal-left {
-    transform: translateX(-80px);
+    transform: translateX(-100px);
   }
 
   .reveal-right {
-    transform: translateX(80px);
+    transform: translateX(100px);
   }
 
-  /* When visible */
+  /* Active state */
   .reveal-active {
     opacity: 1;
     transform: translateX(0);
@@ -638,7 +642,8 @@
       });
     },
     {
-      threshold: 0.3,
+      threshold: 0,
+      rootMargin: '0px 0px -20% 0px',
     },
   );
 
