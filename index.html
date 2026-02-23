@@ -286,11 +286,52 @@
       rgba(9, 9, 121, 1) 35% /* rgba(0, 212, 255, 1) 100% */
     );
     background: linear-gradient(120deg, #0d41e1, #07c8f9);
-    background: linear-gradient(30deg, #6d84c9 0%, #4199fe 35%);
+    /* background: linear-gradient(30deg, #6d84c9 0%, #4199fe 35%); */
     padding: 0px 5px;
     margin: 1px auto;
     box-shadow: 0.5rem 0.5rem 1rem rgba(51, 51, 51, 0.2);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    background-color: #0d41e1;
+    border-radius: 16px;
+    /* max-width: 375px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column; */
+    box-shadow: 0 15px 45px 0 rgba(0, 0, 0, 0.15);
+    position: relative;
+    background-image: linear-gradient(
+      135deg,
+      rgba(74, 222, 128, 0.15),
+      rgba(29, 123, 219, 0.1) 20%,
+      rgba(0, 212, 255, 1) 40%,
+      #0d41e1 100%
+    );
+  }
+  .day-status-container::after {
+    content: '';
+    display: block;
+    top: -3px;
+    left: -3px;
+    bottom: -3px;
+    right: -3px;
+    z-index: -1;
+    position: absolute;
+    border-radius: 16px;
+    background-image: linear-gradient(
+      135deg,
+      #4ade80,
+      #1d7bdb 40%,
+      #293359 60%,
+      #152148 100%
+    );
+    background-image: linear-gradient(
+      135deg,
+      #4ade80,
+      #4ade80 40%,
+      #f9831b 60%,
+      #07c8f9 100%
+    );
   }
   .flip-card-container {
     height: 100%;
@@ -306,7 +347,7 @@
   }
   .day-status-title {
     font-size: 25px;
-    margin: 0 0 1rem;
+    margin: 10px;
     padding-bottom: 10px;
     font-family: 'Changa One', sans-serif;
     font-weight: 400;
@@ -346,7 +387,7 @@
 
   .price {
     color: #dec10b;
-    color: rgba(9, 9, 121, 1);
+    color: rgb(1 55 143);
     font-family: 'Changa One', sans-serif;
     font-size: 20px;
   }
@@ -364,6 +405,7 @@
     border: none;
     position: relative;
   }
+
   .day-status-list > .info-btn.active::after {
     content: '';
     border: 14px solid;
