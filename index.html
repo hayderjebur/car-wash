@@ -632,13 +632,13 @@
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('reveal-active');
-          // observer.unobserve(entry.target);
-          // animate only once
+        } else {
+          entry.target.classList.remove('reveal-active');
         }
       });
     },
     {
-      threshold: 0.2,
+      threshold: 0.3,
     },
   );
 
