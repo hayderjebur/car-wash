@@ -129,7 +129,10 @@
             <button
               class="info-btn active"
               data-content="fantastic-day"
-              style="background: linear-gradient(90deg, #5fc52e, #6eee87)"
+              style="
+                background: linear-gradient(90deg, #5fc52e, #6eee87);
+                width: 100%;
+              "
             >
               Fantastic Day: <span class="price">$18</span>
             </button>
@@ -154,21 +157,19 @@
               >
                 Fantastic Day
               </h4>
-              <div class="">
-                <div id="cardText" class="day-status-sub-title">
-                  <ul class="day-status-list">
-                    <li>Armor all professional</li>
-                    <li>Foam bath wash</li>
-                    <li>Wheel cleaner</li>
-                    <li>Triple Polish</li>
-                    <li>Rain-X Complete surface protectant</li>
-                    <li>
-                      Armor all professional extreme shine wax with carnauba
-                    </li>
-                    <li>Tire Shine</li>
-                    <li>Air Blow Dry</li>
-                  </ul>
-                </div>
+              <div id="cardText" class="day-status-sub-title">
+                <ul class="day-status-list">
+                  <li>Armor all professional</li>
+                  <li>Foam bath wash</li>
+                  <li>Wheel cleaner</li>
+                  <li>Triple Polish</li>
+                  <li>Rain-X Complete surface protectant</li>
+                  <li>
+                    Armor all professional extreme shine wax with carnauba
+                  </li>
+                  <li>Tire Shine</li>
+                  <li>Air Blow Dry</li>
+                </ul>
               </div>
             </section>
           </div>
@@ -314,7 +315,7 @@
   }
   .day-status-sub-title {
     font-size: 16px;
-    margin: 10px 0 0 16px;
+    margin: 10px 0 0 18px;
     /* font-family: 'Changa One', sans-serif; */
     font-weight: 600;
     font-style: normal;
@@ -335,7 +336,7 @@
     border-radius: 5px;
     padding: 5px;
     color: #01378f;
-    width: 11rem;
+    /* width: 11rem; */
     font-size: 20px;
     display: inline-block;
     text-align: left;
@@ -355,7 +356,7 @@
     border-radius: 5px;
     padding: 5px;
     color: #01378f;
-    width: 100%;
+    /* width: 100%; */
     font-size: 18px;
     text-align: left;
     font-family: 'Changa One', sans-serif;
@@ -365,12 +366,12 @@
   }
   .day-status-list > .info-btn.active::after {
     content: '';
-    border: 16px solid;
+    border: 15px solid;
     border-color: transparent transparent transparent
       var(--arrow-color, #6eee87);
     position: absolute;
-    top: -1px;
-    right: -37px;
+    top: 0px;
+    right: -28px;
   }
 
   .header-text {
@@ -513,6 +514,8 @@
     button.addEventListener('click', () => {
       buttons.forEach((btn) => btn.classList.remove('active'));
       button.classList.add('active');
+      buttons.forEach((btn) => (btn.style.width = ''));
+      button.style.width = '100%';
       const key = button.getAttribute('data-content');
       if (key === 'good-day') {
         flipCardContainer.style.background =
