@@ -53,7 +53,7 @@
           </div>
         </div>
       </section>
-      <section class="hero">
+      <section class="hero reveal-top">
         <img src="./hero2.png" alt="Car Wash Hero" class="hero-img" />
       </section>
       <!-- <div style="position: relative">
@@ -525,6 +525,13 @@
       transform 0.8s ease,
       opacity 0.8s ease;
   }
+  .reveal-top {
+    opacity: 0;
+    transform: translateY(0); /* reset */
+    transition:
+      transform 0.8s ease,
+      opacity 0.8s ease;
+  }
 
   /* Initial hidden positions */
   .reveal-left {
@@ -533,6 +540,9 @@
 
   .reveal-right {
     transform: translateX(100px);
+  }
+  .reveal-top {
+    transform: translateY(-100px);
   }
 
   /* Active state */
@@ -628,7 +638,7 @@
 </script>
 <script>
   const revealElements = document.querySelectorAll(
-    '.reveal-left, .reveal-right',
+    '.reveal-left, .reveal-right, .reveal-top',
   );
 
   const observer = new IntersectionObserver(
