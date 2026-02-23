@@ -99,7 +99,7 @@
       <div class="card-wrapper" style="display: flex">
         <section
           style="flex: 1; margin-right: 8px"
-          class="day-status-container"
+          class="day-status-container reveal-left"
         >
           <h3 class="day-status-title">Single Wash Menu</h3>
 
@@ -139,7 +139,7 @@
             </button>
           </div>
         </section>
-        <div style="flex: 1">
+        <div class="reveal-right" style="flex: 1">
           <div class="flip-card-inner" id="flipCard">
             <section class="flip-card-container">
               <!-- FRONT -->
@@ -516,6 +516,26 @@
     height: 100%;
     position: relative;
   }
+
+  .reveal-left,
+  .reveal-right {
+    opacity: 0;
+    transition: all 0.8s ease;
+  }
+
+  .reveal-left {
+    transform: translateX(-80px);
+  }
+
+  .reveal-right {
+    transform: translateX(80px);
+  }
+
+  /* When visible */
+  .reveal-active {
+    opacity: 1;
+    transform: translateX(0);
+  }
 </style>
 
 <script>
@@ -601,4 +621,26 @@
       cardBadge.innerHTML = contentData[key].title;
     });
   });
+</script>
+<script>
+  const revealElements = document.querySelectorAll(
+    '.reveal-left, .reveal-right',
+  );
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal-active');
+          // observer.unobserve(entry.target);
+          // animate only once
+        }
+      });
+    },
+    {
+      threshold: 0.2,
+    },
+  );
+
+  revealElements.forEach((el) => observer.observe(el));
 </script>
