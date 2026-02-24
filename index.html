@@ -23,31 +23,26 @@
             /></a>
           </div>
           <div>
+            <span class="header-info-text header-info-text-detail">Phone:</span>
             <a href="tel:+1(818)574-3835">
-              <span class="header-text"
-                ><span style="color: #f79722; text-transform: uppercase"
-                  >Phone:</span
-                >
-                831-772-6902</span
-              >
+              <span class="header-info-text"> 831-772-6902</span>
             </a>
-            <p style="margin: 2px" class="header-text">
-              <span style="color: #f79722; text-transform: uppercase"
-                >Open 7-Days:</span
-              >
+            <p style="margin: 2px" class="header-info-text">
+              <span class="header-info-text-detail">Open 7-Days:</span>
               6:30 AM - 6:30 PM
             </p>
 
             <address>
+              <span class="header-info-text header-info-text-detail"
+                >Address:</span
+              >
               <a
                 href="https://www.google.com/maps/search/?api=1&query=1430+S+Main+St,+Salinas,+CA+93908"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="header-text"
+                class="header-info-text"
               >
-                <span style="color: #f79722; text-transform: uppercase"
-                  >Address:</span
-                >1430 S Main St, Salinas, CA 93908
+                1430 S Main St, Salinas, CA 93908
               </a>
             </address>
           </div>
@@ -96,103 +91,67 @@
         </div>
       </div> -->
       <!-- </div> -->
-      <div class="card-wrapper" style="display: flex">
-        <section
-          style="flex: 1; margin-right: 8px"
-          class="day-status-container reveal-left"
-        >
+      <div class="card-wrapper">
+        <section class="day-status-container flex-1 reveal-left">
           <h3 class="day-status-title">Single Wash Menu</h3>
 
           <div class="day-status-list">
-            <button
-              class="info-btn"
-              data-content="good-day"
-              style="background: linear-gradient(90deg, #a4bee6, #ebf4f5)"
-            >
+            <button class="info-btn good-day" data-content="good-day">
               Good Day: <span class="price">$12</span>
             </button>
-            <button
-              class="info-btn"
-              data-content="happy-day"
-              style="background: linear-gradient(90deg, #70960c, #fafa00)"
-            >
+            <button class="info-btn happy-day" data-content="happy-day">
               Happy Day: <span class="price">$14</span>
             </button>
 
-            <button
-              class="info-btn"
-              data-content="beautiful-day"
-              style="background: linear-gradient(135deg, #ee5700, #eea300)"
-            >
+            <button class="info-btn beautiful-day" data-content="beautiful-day">
               Beautiful Day: <span class="price">$16</span>
             </button>
 
             <button
-              class="info-btn active"
+              class="info-btn fantastic-day active"
               data-content="fantastic-day"
-              style="
-                background: linear-gradient(90deg, #5fc52e, #6eee87);
-                width: 100%;
-              "
             >
               Fantastic Day: <span class="price">$18</span>
             </button>
           </div>
         </section>
-        <div class="reveal-right" style="flex: 1">
-          <div class="flip-card-inner" id="flipCard">
-            <section class="flip-card-container">
-              <!-- FRONT -->
-              <h4
-                id="cardBadge"
-                class="info-btn day-status"
+        <section class="reveal-right flex-1">
+          <div class="day-status-details-card">
+            <h4 id="cardBadge" class="day-status">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
                 style="
-                  /* background: linear-gradient(90deg, #1fd083, #f4985a, #3877d5); */
-                  text-transform: uppercase;
-                  width: 100%;
-                  margin: 0;
-                  padding: 3px 0;
-                  text-align: center;
-                  border-bottom: 2px solid #01378f;
+                  width: 16px;
+                  height: 16px;
+                  border: 1px solid;
+                  border-radius: 50%;
                 "
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  height="24"
-                  style="
-                    width: 16px;
-                    height: 16px;
-                    border: 1px solid;
-                    border-radius: 50%;
-                  "
-                >
-                  <path fill="none" d="M0 0h24v24H0z"></path>
-                  <path
-                    fill="currentColor"
-                    d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
-                  ></path>
-                </svg>
-                Fantastic Day
-              </h4>
-              <div id="cardText" class="day-status-sub-title">
-                <ul class="day-status-list">
-                  <li>Armor all professional</li>
-                  <li>Foam bath wash</li>
-                  <li>Wheel cleaner</li>
-                  <li>Triple Polish</li>
-                  <li>Rain-X Complete surface protectant</li>
-                  <li>
-                    Armor all professional extreme shine wax with carnauba
-                  </li>
-                  <li>Tire Shine</li>
-                  <li>Air Blow Dry</li>
-                </ul>
-              </div>
-            </section>
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path
+                  fill="currentColor"
+                  d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+                ></path>
+              </svg>
+              Fantastic Day
+            </h4>
+            <div id="cardText" class="day-status-sub-title">
+              <ul class="day-status-list">
+                <li>Armor all professional</li>
+                <li>Foam bath wash</li>
+                <li>Wheel cleaner</li>
+                <li>Triple Polish</li>
+                <li>Rain-X Complete surface protectant</li>
+                <li>Armor all professional extreme shine wax with carnauba</li>
+                <li>Tire Shine</li>
+                <li>Air Blow Dry</li>
+              </ul>
+            </div>
           </div>
-        </div>
+        </section>
       </div>
 
       <section class="" style="">
@@ -289,15 +248,23 @@
     margin: 1rem 5rem;
     font-family: Arial, sans-serif;
   }
+  .flex-1 {
+    flex: 1;
+  }
   .container {
     max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .card-wrapper {
+    display: flex;
     margin: 0 auto;
   }
 
   .day-status-container {
     text-align: center;
     height: 100%;
-    margin: 0;
+    margin: 0 8px 0 0;
     border-radius: 12px;
     background: linear-gradient(
       90deg,
@@ -307,16 +274,12 @@
     background: linear-gradient(120deg, #0d41e1, #07c8f9);
     /* background: linear-gradient(30deg, #6d84c9 0%, #4199fe 35%); */
     padding: 0px 5px;
-    margin: 1px auto;
+    /* margin: 1px auto; */
     box-shadow: 0.5rem 0.5rem 1rem rgba(51, 51, 51, 0.2);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
     background-color: #0d41e1;
     border-radius: 16px;
-    /* max-width: 375px;
-    padding: 32px;
-    display: flex;
-    flex-direction: column; */
     box-shadow: 0 15px 45px 0 rgba(0, 0, 0, 0.15);
     position: relative;
     background-image: linear-gradient(
@@ -327,7 +290,7 @@
       #0d41e1 100%
     );
   }
-  .day-status-container::after {
+  /* .day-status-container::after {
     content: '';
     display: block;
     top: -3px;
@@ -351,10 +314,10 @@
       rgb(0 132 240) 60%,
       #6eee87 100%
     );
-  }
-  .flip-card-container {
+  } */
+  .day-status-details-card {
     height: 100%;
-    /* padding: 0px 10px; */
+
     margin: 1px auto;
     border-radius: 12px;
     background: #01378f;
@@ -402,6 +365,26 @@
     text-align: left;
     font-family: 'Changa One', sans-serif;
     cursor: pointer;
+
+    text-transform: uppercase;
+    width: 100%;
+    margin: 0;
+    padding: 3px 0;
+    text-align: center;
+    border-bottom: 2px solid #01378f;
+  }
+  .good-day {
+    background: linear-gradient(90deg, #a4bee6, #ebf4f5);
+  }
+  .happy-day {
+    background: linear-gradient(90deg, #70960c, #fafa00);
+  }
+  .beautiful-day {
+    background: linear-gradient(135deg, #ee5700, #eea300);
+  }
+  .fantastic-day {
+    background: linear-gradient(90deg, #5fc52e, #6eee87);
+    width: 100%;
   }
 
   .price {
@@ -435,15 +418,17 @@
     right: -27px;
   }
 
-  .header-text {
+  .header-info-text {
     font-size: 12px;
     font-family: 'Changa One', sans-serif;
     color: #0b7bc3;
     cursor: pointer;
   }
+  .header-info-text-detail {
+    color: #f79722;
+    text-transform: uppercase;
+  }
   .hero {
-    /* background: url('./hero2.png') no-repeat center center / cover; */
-    /* min-height: 75vh;  */
     overflow: hidden;
     top: 0px;
     width: 100%;
@@ -511,12 +496,6 @@
     background: #2980b9;
   } */
 
-  .flip-card-inner {
-    width: 100%;
-    height: 100%;
-    position: relative;
-  }
-
   .reveal-left,
   .reveal-right {
     opacity: 0;
@@ -554,7 +533,7 @@
 
 <script>
   const buttons = document.querySelectorAll('.info-btn');
-  const flipCardContainer = document.querySelector('.flip-card-container');
+  const flipCardContainer = document.querySelector('.day-status-details-card');
   const cardTitle = document.getElementById('cardTitle');
   const cardText = document.getElementById('cardText');
   const cardBadge = document.getElementById('cardBadge');
