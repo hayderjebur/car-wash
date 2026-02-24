@@ -106,13 +106,14 @@
             <button class="info-btn beautiful-day" data-content="beautiful-day">
               Beautiful Day: <span class="price">$16</span>
             </button>
-
-            <button
-              class="info-btn fantastic-day active"
-              data-content="fantastic-day"
-            >
-              Fantastic Day: <span class="price">$18</span>
-            </button>
+            <div class="info-btn-wrapper">
+              <button
+                class="info-btn fantastic-day bubbly-button active"
+                data-content="fantastic-day"
+              >
+                Fantastic Day: <span class="price">$18</span>
+              </button>
+            </div>
           </div>
         </section>
         <section class="reveal-right flex-1">
@@ -153,7 +154,7 @@
           </div>
         </section>
       </div>
-
+      <button class="bubbly-button">Join the Clean Car Club</button>
       <section class="" style="">
         <h2
           style="
@@ -251,6 +252,53 @@
   .flex-1 {
     flex: 1;
   }
+
+  .header-info-text {
+    font-size: 12px;
+    font-family: 'Changa One', sans-serif;
+    color: #0b7bc3;
+    cursor: pointer;
+  }
+  .header-info-text-detail {
+    color: #f79722;
+    text-transform: uppercase;
+  }
+  .hero {
+    overflow: hidden;
+    top: 0px;
+    width: 100%;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+    border-radius: 50px;
+  }
+
+  .hero-car {
+    /* position: absolute;
+    top: 0;
+    width: 100%; */
+    /* Soft edge fade */
+    mask-image: linear-gradient(to left, black 70%, transparent);
+    -webkit-mask-image: linear-gradient(to left, black 87%, transparent);
+  }
+
+  /* NNavbar */
+
+  .brand {
+    /* position: absolute; */
+    padding-left: 20px;
+    z-index: 9999;
+  }
+  .nav-container {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
   .container {
     max-width: 700px;
     margin: 0 auto;
@@ -266,18 +314,8 @@
     height: 100%;
     margin: 0 8px 0 0;
     border-radius: 12px;
-    background: linear-gradient(
-      90deg,
-      rgba(2, 0, 36, 1) 0%,
-      rgba(9, 9, 121, 1) 35% /* rgba(0, 212, 255, 1) 100% */
-    );
     background: linear-gradient(120deg, #0d41e1, #07c8f9);
-    /* background: linear-gradient(30deg, #6d84c9 0%, #4199fe 35%); */
     padding: 0px 5px;
-    /* margin: 1px auto; */
-    box-shadow: 0.5rem 0.5rem 1rem rgba(51, 51, 51, 0.2);
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
     background-color: #0d41e1;
     border-radius: 16px;
     box-shadow: 0 15px 45px 0 rgba(0, 0, 0, 0.15);
@@ -351,21 +389,16 @@
     margin: 0;
     padding: 0;
     color: #01378f;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
   .day-status {
-    font-weight: bold;
-    margin-bottom: 0;
-    border-radius: 5px;
-    padding: 5px;
-    color: #01378f;
-    /* width: 11rem; */
-    font-size: 20px;
     display: inline-block;
-    text-align: left;
+    font-weight: bold;
+    border-radius: 5px;
+    color: #01378f;
+    font-size: 20px;
     font-family: 'Changa One', sans-serif;
     cursor: pointer;
-
     text-transform: uppercase;
     width: 100%;
     margin: 0;
@@ -388,7 +421,6 @@
   }
 
   .price {
-    color: #dec10b;
     color: rgb(1 55 143);
     font-family: 'Changa One', sans-serif;
     font-size: 20px;
@@ -399,7 +431,6 @@
     border-radius: 5px;
     padding: 5px;
     color: #01378f;
-    /* width: 100%; */
     font-size: 18px;
     text-align: left;
     font-family: 'Changa One', sans-serif;
@@ -417,61 +448,20 @@
     top: 1px;
     right: -27px;
   }
-
-  .header-info-text {
-    font-size: 12px;
-    font-family: 'Changa One', sans-serif;
-    color: #0b7bc3;
-    cursor: pointer;
-  }
-  .header-info-text-detail {
-    color: #f79722;
-    text-transform: uppercase;
-  }
-  .hero {
-    overflow: hidden;
-    top: 0px;
-    width: 100%;
-    border-radius: 50px;
+  .info-btn-wrapper {
     position: relative;
-    overflow: hidden;
-  }
-  .hero-img {
-    width: 100%;
-    height: 100%;
-    object-fit: scale-down;
-    border-radius: 50px;
   }
 
-  .hero-car {
-    /* position: absolute;
-    top: 0;
-    width: 100%; */
-    /* Soft edge fade */
-    mask-image: linear-gradient(to left, black 70%, transparent);
-    -webkit-mask-image: linear-gradient(to left, black 87%, transparent);
+  .info-btn-wrapper:has(.info-btn.active)::after {
+    content: '';
+    border: 14px solid;
+    border-color: transparent transparent transparent
+      var(--arrow-color, #6eee87);
+    position: absolute;
+    top: 1px;
+    right: -27px;
   }
 
-  /* NNavbar */
-
-  .navigation {
-    height: 55px;
-  }
-  .brand {
-    /* position: absolute; */
-    padding-left: 20px;
-    z-index: 9999;
-  }
-  .brand a,
-  .brand a:visited {
-    color: #4199fe;
-    text-decoration: none;
-  }
-  .nav-container {
-    display: flex;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
   @media only screen and (max-width: 800px) {
     body {
       margin: 0 0.5rem;
@@ -528,6 +518,174 @@
   .reveal-active {
     opacity: 1;
     transform: translateX(0);
+  }
+</style>
+<style>
+  .bubbly-button {
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  .bubbly-button:before,
+  .bubbly-button:after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+  }
+
+  .bubbly-button:before {
+    display: none;
+    top: -75%;
+    background-image:
+      radial-gradient(circle, #eea300 20%, transparent 20%),
+      radial-gradient(circle, transparent 20%, #6eee87 20%, transparent 30%),
+      radial-gradient(circle, #eea300 20%, transparent 20%),
+      radial-gradient(circle, #6eee87 20%, transparent 20%),
+      radial-gradient(
+        circle,
+        transparent 10%,
+        transparent 15%,
+        transparent 20%
+      ),
+      radial-gradient(circle, #6eee87 20%, transparent 20%),
+      radial-gradient(circle, #fafa00 20%, transparent 20%),
+      radial-gradient(circle, #6eee87 20%, transparent 20%),
+      radial-gradient(circle, #fafa00 20%, transparent 20%);
+    background-size:
+      10% 10%,
+      20% 20%,
+      15% 15%,
+      20% 20%,
+      18% 18%,
+      10% 10%,
+      15% 15%,
+      10% 10%,
+      18% 18%;
+  }
+
+  .bubbly-button:after {
+    display: none;
+    bottom: -75%;
+    background-image:
+      radial-gradient(circle, #eea300 20%, transparent 20%),
+      radial-gradient(circle, #eea300 20%, transparent 20%),
+      radial-gradient(circle, transparent 100%, #6eee87 15%, transparent 20%),
+      radial-gradient(circle, #6eee87 20%, transparent 20%),
+      radial-gradient(circle, #6eee87 20%, transparent 20%),
+      radial-gradient(circle, #fafa00 20%, transparent 20%),
+      radial-gradient(circle, #6eee87 20%, transparent 20%);
+    background-size:
+      15% 15%,
+      20% 20%,
+      18% 18%,
+      20% 20%,
+      15% 15%,
+      10% 10%,
+      20% 20%;
+  }
+
+  .bubbly-button.animate:before {
+    display: block;
+    animation: topBubbles ease-in-out 1s forwards;
+  }
+
+  .bubbly-button.animate:after {
+    display: block;
+    animation: bottomBubbles ease-in-out 1s forwards;
+  }
+
+  /* Animations */
+
+  @keyframes topBubbles {
+    0% {
+      background-position:
+        5% 90%,
+        10% 90%,
+        10% 90%,
+        15% 90%,
+        25% 90%,
+        25% 90%,
+        40% 90%,
+        55% 90%,
+        70% 90%;
+    }
+    50% {
+      background-position:
+        0% 80%,
+        0% 20%,
+        10% 40%,
+        20% 0%,
+        30% 30%,
+        22% 50%,
+        50% 50%,
+        65% 20%,
+        90% 30%;
+    }
+    100% {
+      background-position:
+        0% 70%,
+        0% 10%,
+        10% 30%,
+        20% -10%,
+        30% 20%,
+        22% 40%,
+        50% 40%,
+        65% 10%,
+        90% 20%;
+      background-size:
+        0% 0%,
+        0% 0%,
+        0% 0%,
+        0% 0%,
+        0% 0%,
+        0% 0%;
+    }
+  }
+
+  @keyframes bottomBubbles {
+    0% {
+      background-position:
+        10% -10%,
+        30% 10%,
+        55% -10%,
+        70% -10%,
+        85% -10%,
+        70% -10%,
+        70% 0%;
+    }
+    50% {
+      background-position:
+        0% 80%,
+        20% 80%,
+        45% 60%,
+        60% 100%,
+        75% 70%,
+        95% 60%,
+        105% 0%;
+    }
+    100% {
+      background-position:
+        0% 90%,
+        20% 90%,
+        45% 70%,
+        60% 110%,
+        75% 80%,
+        95% 70%,
+        110% 10%;
+      background-size:
+        0% 0%,
+        0% 0%,
+        0% 0%,
+        0% 0%,
+        0% 0%,
+        0% 0%;
+    }
   }
 </style>
 
@@ -637,4 +795,22 @@
   );
 
   revealElements.forEach((el) => observer.observe(el));
+</script>
+<script>
+  var animateButton = function (e) {
+    e.preventDefault;
+    //reset animation
+    e.target.classList.remove('animate');
+
+    e.target.classList.add('animate');
+    setTimeout(function () {
+      e.target.classList.remove('animate');
+    }, 700);
+  };
+
+  var bubblyButtons = document.getElementsByClassName('bubbly-button');
+
+  for (var i = 0; i < bubblyButtons.length; i++) {
+    bubblyButtons[i].addEventListener('click', animateButton, false);
+  }
 </script>
