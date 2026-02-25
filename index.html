@@ -51,7 +51,7 @@
       <section class="hero reveal-top">
         <img src="./hero.png" alt="Car Wash Hero" class="hero-img" />
       </section>
-      <section style="">
+      <section>
         <div class="reveal-right">
           <h2
             style="
@@ -67,8 +67,7 @@
             Enjoy
             <span style="color: #41ac4b; font-weight: 600">unlimited</span>
             washes for a low monthly fee. Our membership program offers great
-            value and convenience, allowing you to keep your car looking its
-            best all year round.
+            value and convenience.
             <span style="color: #41ac4b; font-weight: 600">Sign up</span> today
             and experience the benefits of being a member!
           </p>
@@ -387,15 +386,33 @@
   } */
   .day-status-details-card {
     height: 100%;
-
     margin: 1px auto;
     border-radius: 12px;
     background: #01378f;
     background: linear-gradient(90deg, #5fc52e, #6eee87);
-
     box-shadow: 0.5rem 0.5rem 1rem rgba(51, 51, 51, 0.2);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     text-align: center;
+  }
+  .fantastic-day::after {
+    content: 'Most Popular';
+    position: absolute;
+    color: white;
+    display: block;
+    background-color: #41ee3b;
+    text-align: center;
+    right: 2px;
+    bottom: 6px;
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    font-size: 0.5em;
+    padding-top: 22px;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 0.13em;
+    background: linear-gradient(120deg, #0d41e1, #07c8f9);
   }
   .day-status-title {
     font-size: 25px;
@@ -758,7 +775,26 @@
       </ul>`,
     },
     'fantastic-day': {
-      title: 'Fantastic Day',
+      title: `
+       <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                style="
+                  width: 16px;
+                  height: 16px;
+                  border: 1px solid;
+                  border-radius: 50%;
+                "
+              >
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path
+                  fill="currentColor"
+                  d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+                ></path>
+              </svg>
+      Fantastic Day`,
       text: `<ul class="day-status-list">
          <li>Armor all professional</li>
                     <li>Foam bath wash</li>
@@ -777,6 +813,7 @@
   buttons.forEach((button) => {
     button.addEventListener('click', () => {
       buttons.forEach((btn) => btn.classList.remove('active'));
+      flipCardContainer.classList.remove('fantastic-day');
       button.classList.add('active');
       buttons.forEach((btn) => (btn.style.width = ''));
       button.style.width = '100%';
@@ -794,13 +831,13 @@
           'linear-gradient(135deg, #ee5700, #eea300)';
         button.style.setProperty('--arrow-color', '#eea300');
       } else if (key === 'fantastic-day') {
+        flipCardContainer.classList.add('fantastic-day');
+
         flipCardContainer.style.background =
           'linear-gradient(90deg, #5fc52e, #6eee87)';
         button.style.setProperty('--arrow-color', '#6eee87');
       }
-      // cardTitle.innerHTML = contentData[key].title;
       cardText.innerHTML = contentData[key].text;
-      // cardBadge.setAttribute('data-content', key);
       cardBadge.innerHTML = contentData[key].title;
     });
   });
@@ -828,9 +865,9 @@
 
   revealElements.forEach((el) => observer.observe(el));
 </script>
-<script>
+<script async>
   var animateButton = function (e) {
-    e.preventDefault;
+    e.preventDefault();
     //reset animation
     e.target.classList.remove('animate');
 
