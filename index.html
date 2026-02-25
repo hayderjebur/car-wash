@@ -75,7 +75,7 @@
         <img
           src="./banner2.png"
           alt="Car Wash Menu"
-          style="width: 100%; display: block"
+          style="width: 100%; max-width: 100%; height: auto; display: block"
           class="reveal-left"
         />
       </section>
@@ -279,6 +279,9 @@
   </body>
 </html>
 <style>
+  * {
+    box-sizing: border-box;
+  }
   body {
     margin: 1rem 5rem;
     font-family: Arial, sans-serif;
@@ -308,19 +311,13 @@
   }
   .hero-img {
     width: 100%;
-    height: 100%;
-    object-fit: scale-down;
+    max-width: 100%;
+    height: auto;
     border-radius: 50px;
+    display: block;
+    overflow: hidden;
   }
 
-  .hero-car {
-    /* position: absolute;
-    top: 0;
-    width: 100%; */
-    /* Soft edge fade */
-    mask-image: linear-gradient(to left, black 70%, transparent);
-    -webkit-mask-image: linear-gradient(to left, black 87%, transparent);
-  }
   .brand {
     /* position: absolute; */
     padding-left: 20px;
@@ -328,7 +325,6 @@
   }
   .nav-container {
     display: flex;
-    max-width: 1000px;
     margin: 0 auto;
   }
   .container {
@@ -520,6 +516,7 @@
     }
     .container {
       max-width: none;
+      margin: 0;
     }
     .nav-container .brand img {
       height: 70px;
