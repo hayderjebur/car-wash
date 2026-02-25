@@ -282,11 +282,23 @@
   * {
     box-sizing: border-box;
   }
+  html,
   body {
-    margin: 1rem 5rem;
-    font-family: Arial, sans-serif;
+    width: 100%;
     overflow-x: hidden;
+    font-family: Arial, sans-serif;
   }
+
+  .container {
+    max-width: 800px;
+    margin: 1rem auto;
+  }
+
+  img,
+  video {
+    max-width: 100%;
+  }
+
   .flex-1 {
     flex: 1;
   }
@@ -325,10 +337,6 @@
   }
   .nav-container {
     display: flex;
-    margin: 0 auto;
-  }
-  .container {
-    max-width: 800px;
     margin: 0 auto;
   }
 
@@ -511,12 +519,8 @@
   }
 
   @media only screen and (max-width: 800px) {
-    body {
-      margin: 0 0.5rem;
-    }
     .container {
-      max-width: none;
-      margin: 0;
+      margin: 12px;
     }
     .nav-container .brand img {
       height: 70px;
