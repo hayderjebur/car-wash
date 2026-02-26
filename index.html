@@ -164,6 +164,7 @@
               <button
                 class="info-btn fantastic-day bubbly-button active"
                 data-content="fantastic-day"
+                style="width: 100%"
               >
                 Fantastic Day: <span class="price">$18</span>
               </button>
@@ -498,6 +499,7 @@
     margin-bottom: 10px;
     border-radius: 5px;
     padding: 5px;
+    width: fit-content;
     color: #01378f;
     font-size: 18px;
     text-align: left;
@@ -855,7 +857,6 @@
         button.style.setProperty('--arrow-color', '#eea300');
       } else if (key === 'fantastic-day') {
         flipCardContainer.classList.add('fantastic-day');
-
         flipCardContainer.style.background =
           'linear-gradient(90deg, #5fc52e, #6eee87)';
         button.style.setProperty('--arrow-color', '#6eee87');
