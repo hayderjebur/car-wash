@@ -60,7 +60,17 @@
         </div>
       </section>
       <section class="hero reveal-top">
-        <img src="./hero-desk.png" alt="Car Wash Hero" class="hero-img" />
+        <!-- <img src="./hero-desk.png" alt="Car Wash Hero" class="hero-img" /> -->
+        <picture>
+          <source media="(min-width: 768px)" srcset="./hero-desk.png" />
+          <img
+            src="./hero.png"
+            alt="Car Wash Hero"
+            class="hero-img"
+            loading="eager"
+            fetchpriority="high"
+          />
+        </picture>
       </section>
       <section>
         <div class="reveal-right">
@@ -230,6 +240,19 @@
         </p>
       </section>
       <section>
+        <div class="containerTest">
+          <div class="left"></div>
+          <img src="./w1.png" alt="" />
+          <!-- <img src="https://i.postimg.cc/3wQcJBjq/car.png" alt="" /> -->
+          <h4>
+            <span style="color: #5fc52e">Wash</span
+            ><span style="color: #ee5700">&</span
+            ><span style="color: #01378f">Dash</span>
+          </h4>
+          <div class="right"></div>
+        </div>
+      </section>
+      <section>
         <h2
           style="
             text-align: center;
@@ -267,19 +290,6 @@
           you need a quick wash or a thorough cleaning, we have the perfect
           service for you!
         </p>
-      </section>
-      <section>
-        <div class="containerTest">
-          <div class="left"></div>
-          <img src="./w1.png" alt="" />
-          <!-- <img src="https://i.postimg.cc/3wQcJBjq/car.png" alt="" /> -->
-          <h4>
-            <span style="color: #5fc52e">Wash</span
-            ><span style="color: #ee5700">&</span
-            ><span style="color: #01378f">Dash</span>
-          </h4>
-          <div class="right"></div>
-        </div>
       </section>
 
       <section style="margin-top: 2rem">
