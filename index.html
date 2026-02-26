@@ -19,14 +19,25 @@
         <div class="nav-container">
           <div class="brand">
             <a href="#!"
-              ><img src="/logo.webp" alt="Logo" width="100px" height="100px"
+              ><img src="/logo.webp" alt="Logo" width="150px" height="120px"
             /></a>
           </div>
-          <div>
-            <span class="header-info-text header-info-text-detail">Phone:</span>
-            <a href="tel:+1(818)574-3835">
-              <span class="header-info-text"> 831-772-6902</span>
-            </a>
+          <div
+            style="
+              display: flex;
+              justify-content: space-around;
+              align-items: start;
+              flex-direction: column;
+            "
+          >
+            <p style="margin: 0">
+              <span class="header-info-text header-info-text-detail"
+                >Phone:</span
+              >
+              <a href="tel:+1(818)574-3835">
+                <span class="header-info-text"> 831-772-6902</span>
+              </a>
+            </p>
             <p style="margin: 2px" class="header-info-text">
               <span class="header-info-text-detail">Open 7-Days:</span>
               6:30 AM - 6:30 PM
@@ -304,7 +315,7 @@
   }
 
   .header-info-text {
-    font-size: 14px;
+    font-size: 20px;
     font-family: 'Changa One', sans-serif;
     color: #0b7bc3;
     cursor: pointer;
@@ -313,14 +324,14 @@
     color: #f79722;
     text-transform: uppercase;
   }
-  .hero {
+  /* .hero {
     overflow: hidden;
     top: 0px;
     width: 100%;
     border-radius: 50px;
     position: relative;
     overflow: hidden;
-  }
+  } */
   .hero-img {
     width: 100%;
     max-width: 100%;
@@ -332,12 +343,13 @@
 
   .brand {
     /* position: absolute; */
-    padding-left: 20px;
-    z-index: 9999;
+    /* padding-left: 20px;
+    z-index: 9999; */
   }
   .nav-container {
     display: flex;
-    margin: 0 auto;
+    justify-content: space-between;
+    /* margin: 0 auto; */
   }
 
   .card-wrapper {
@@ -523,11 +535,15 @@
       margin: 12px;
     }
     .nav-container .brand img {
+      width: 100px;
       height: 70px;
     }
     .hero {
       /* min-height: 31vh; */
-      height: fit-content;
+      /* height: fit-content; */
+    }
+    .header-info-text {
+      font-size: 14px;
     }
   }
 
