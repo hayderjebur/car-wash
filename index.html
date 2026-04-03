@@ -79,26 +79,78 @@
               text-align: center;
               font-family: 'Changa One', sans-serif;
               color: #0b7bc2;
-              margin: 0 0 0.4rem;
+              margin: 1rem;
             "
           >
-            Join monthly membership
+            One Membership. Two Locations. Unlimited Clean.
           </h2>
           <p style="text-align: center; font-size: 18px; margin: 0">
-            Enjoy
+            Enjoy the convenience of
+            <span style="color: #41ac4b; font-weight: 600">unlimited</span> car
+            washes at both
+            <span style="color: #41ac4b; font-weight: 600">Wash & Dash</span>
+            and
+            <span style="color: #41ac4b; font-weight: 600">Del Ray</span>
+            locations with one simple monthly membership.Getting started is
+            quick and easy, and you can
+            <span style="color: #41ac4b; font-weight: 600">cancel anytime</span
+            >—no long-term commitment.
+            <!-- Enjoy
             <span style="color: #41ac4b; font-weight: 600">unlimited</span>
             washes for a low monthly fee. Our membership program offers great
             value and convenience.
             <span style="color: #41ac4b; font-weight: 600">Sign up</span> today
-            and experience the benefits of being a member!
+            and experience the benefits of being a member! -->
           </p>
         </div>
-        <img
+        <!-- <img
           src="./banner2.png"
           alt="Car Wash Menu"
           style="width: 100%; max-width: 100%; height: auto; display: block"
           class="reveal-left"
+        /> -->
+      </section>
+      <section style="position: relative; ">
+        <img
+          src="./b2.png"
+          alt="Car Wash Menu"
+          style="width: 100%; max-width: 100%; height: auto; display: block"
+          class="reveal-left"
         />
+        <div style="position: absolute; top: 30px; right: 0">
+          <img
+            src="./logo-wash.png"
+            alt="Car Wash Menu"
+            style="width: 100px; height: 80px; display: block; margin-bottom: 10px "
+            class="reveal-right"
+          />
+          <img
+            src="./logo-del.png"
+            alt="Car Wash Menu"
+            style="width: 100px; height: 80px; display: block"
+            class="reveal-right"
+          />
+        </div>
+        <div class="day-status-list" style="position: absolute; top:30px; left:6px">
+            <button class="info-btn-monthly good-day" data-content="good-">
+              Good Day: <span class="price">$25</span>
+            </button>
+            <button class="info-btn-monthly happy-day" data-content="happy-">
+              Happy Day: <span class="price">$30</span>
+            </button>
+
+            <button class="info-btn-monthly beautiful-day" data-content="beautiful-">
+              Beautiful Day: <span class="price">$35</span>
+            </button>
+            <div class="info-btn-wrapper">
+              <button
+                class="info-btn-monthly fantastic-day bubbly-button active"
+                data-content="fantastic-"
+                style="width: 100%"
+              >
+                Fantastic Day: <span class="price">$40</span>
+              </button>
+            </div>
       </section>
       <!-- <div style="position: relative">
         <img
@@ -349,14 +401,7 @@
     color: #f79722;
     text-transform: uppercase;
   }
-  /* .hero {
-    overflow: hidden;
-    top: 0px;
-    width: 100%;
-    border-radius: 50px;
-    position: relative;
-    overflow: hidden;
-  } */
+
   .hero-img {
     width: 100%;
     max-width: 100%;
@@ -366,15 +411,9 @@
     overflow: hidden;
   }
 
-  .brand {
-    /* position: absolute; */
-    /* padding-left: 20px;
-    z-index: 9999; */
-  }
   .nav-container {
     display: flex;
     justify-content: space-between;
-    /* margin: 0 auto; */
   }
 
   .card-wrapper {
@@ -518,7 +557,7 @@
     font-family: 'Changa One', sans-serif;
     font-size: 20px;
   }
-  .info-btn {
+  .info-btn, .info-btn-monthly {
     font-weight: bold;
     margin-bottom: 10px;
     border-radius: 5px;
@@ -618,7 +657,7 @@
     transform: translateX(0);
   }
 </style>
-<style>
+<!-- <style>
   .bubbly-button {
     -webkit-appearance: none;
     appearance: none;
@@ -785,7 +824,7 @@
         0% 0%;
     }
   }
-</style>
+</style> -->
 
 <script>
   const buttons = document.querySelectorAll('.info-btn');
