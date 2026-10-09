@@ -343,7 +343,7 @@
           </div> -->
           <!-- Single Wash Menu Card -->
           <div class="card-wrapper">
-            <div class="day-status-container flex-1 reveal-left">
+            <div class="day-status-monthly-container flex-1 reveal-left">
               <h3 class="day-status-title">Monthly Wash Menu</h3>
 
               <div class="day-status-list">
@@ -448,22 +448,22 @@
           designed to give your vehicle a fresh, sparkling appearance.
         </p>
         <div class="card-wrapper">
-          <section class="day-status-container flex-1 reveal-left">
+          <section class="day-status-single-container flex-1 reveal-left">
             <h3 class="day-status-title">Single Wash Menu</h3>
 
             <div class="day-status-list">
               <button class="info-btn good-day" data-content="good-day">
-                Good Day: <span class="price">$12</span>
+                Good Day: <span class="price">$12/day</span>
               </button>
               <button class="info-btn happy-day" data-content="happy-day">
-                Happy Day: <span class="price">$14</span>
+                Happy Day: <span class="price">$14/day</span>
               </button>
 
               <button
                 class="info-btn beautiful-day"
                 data-content="beautiful-day"
               >
-                Beautiful Day: <span class="price">$16</span>
+                Beautiful Day: <span class="price">$16/day</span>
               </button>
               <div class="info-btn-wrapper">
                 <button
@@ -471,7 +471,7 @@
                   data-content="fantastic-day"
                   style="width: 100%"
                 >
-                  Fantastic Day: <span class="price">$18</span>
+                  Fantastic Day: <span class="price">$18/day</span>
                 </button>
               </div>
             </div>
@@ -534,6 +534,11 @@
             highest quality of products and state of the art & well maintained
             equipment to help keep your vihicles looking their best.
           </p>
+          <img
+            src="./bmw.jpg"
+            alt="Car Wash Menu"
+            style="width: auto; height: auto; display: block; margin: 0 auto"
+          />
         </section>
         <!--  About Us -->
         <section class="reveal-right">
@@ -563,6 +568,11 @@
             <strong class="header-info-text-detail">Salinas</strong> and offers
             exterior express services.
           </p>
+          <img
+            src="./suv.jpg"
+            alt="Car Wash Menu"
+            style="width: auto; height: auto; display: block; margin: 0 auto"
+          />
         </section>
         <!-- Why Choose Us -->
         <section class="reveal-left" style="margin-top: 2rem">
@@ -738,24 +748,27 @@
     margin: 0 auto;
   }
 
-  .day-status-container {
+  .day-status-monthly-container,
+  .day-status-single-container {
     text-align: center;
     height: 100%;
     margin: 0 8px 0 0;
     border-radius: 12px;
-    background: linear-gradient(120deg, #0d41e1, #07c8f9);
     padding: 10px 5px;
-    background-color: #0d41e1;
+    background: linear-gradient(120deg, #0d41e1, #07c8f9);
     border-radius: 16px;
     box-shadow: 0 15px 45px 0 rgba(0, 0, 0, 0.15);
     position: relative;
-    background-image: linear-gradient(
+    /* background-image: linear-gradient(
       135deg,
       rgba(74, 222, 128, 0.15),
       rgba(29, 123, 219, 0.1) 20%,
       rgba(0, 212, 255, 1) 40%,
       #0d41e1 100%
-    );
+    ); */
+  }
+  .day-status-single-container {
+    background: linear-gradient(120deg, #32cd32, #07c8f9);
   }
 
   .day-status-details-card {
@@ -1038,6 +1051,7 @@
       container.classList.add('card-animate');
     });
   }
+
   function activateButton(button) {
     animateCard();
 
