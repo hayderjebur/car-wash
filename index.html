@@ -343,23 +343,49 @@
           </div> -->
           <!-- Single Wash Menu Card -->
           <div class="card-wrapper">
-            <div class="day-status-monthly-container flex-1 reveal-left">
+            <div class="day-status-monthly-container flex-1">
               <h3 class="day-status-title">Monthly Wash Menu</h3>
 
               <div class="day-status-list">
-                <button class="info-btn good-day" data-content="good-day">
-                  Good Day: <span class="price">$25/month</span>
-                </button>
-                <button class="info-btn happy-day" data-content="happy-day">
-                  Happy Day: <span class="price">$30/month</span>
-                </button>
-
-                <button
-                  class="info-btn beautiful-day"
-                  data-content="beautiful-day"
-                >
-                  Beautiful Day: <span class="price">$35/month</span>
-                </button>
+                <div class="flex-1">
+                  <button class="info-btn good-day" data-content="good-day">
+                    Good Day: <span class="price">$25/month</span>
+                  </button>
+                  <div class="good-day-details-card">
+                    <h4 id="cardTitleGoodDay" class="day-status"></h4>
+                    <div
+                      id="cardTextGoodDay"
+                      class="day-status-sub-title"
+                    ></div>
+                  </div>
+                </div>
+                <div class="flex-1">
+                  <button class="info-btn happy-day" data-content="happy-day">
+                    Happy Day: <span class="price">$30/month</span>
+                  </button>
+                  <div class="happy-day-details-card">
+                    <h4 id="cardTitleHappyDay" class="day-status"></h4>
+                    <div
+                      id="cardTextHappyDay"
+                      class="day-status-sub-title"
+                    ></div>
+                  </div>
+                </div>
+                <div class="flex-1">
+                  <button
+                    class="info-btn beautiful-day"
+                    data-content="beautiful-day"
+                  >
+                    Beautiful Day: <span class="price">$35/month</span>
+                  </button>
+                  <div class="beautiful-day-details-card">
+                    <h4 id="cardTitleBeautifulDay" class="day-status"></h4>
+                    <div
+                      id="cardTextBeautifulDay"
+                      class="day-status-sub-title"
+                    ></div>
+                  </div>
+                </div>
                 <div class="info-btn-wrapper">
                   <button
                     class="info-btn fantastic-day active"
@@ -368,45 +394,49 @@
                   >
                     Fantastic Day: <span class="price">$40/month</span>
                   </button>
-                </div>
-              </div>
-            </div>
-            <div class="reveal-right flex-1">
-              <div class="day-status-details-card fantastic-day">
-                <h4 id="cardTitle" class="day-status">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    height="24"
-                    style="
-                      width: 16px;
-                      height: 16px;
-                      border: 1px solid;
-                      border-radius: 50%;
-                    "
-                  >
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                    <path
-                      fill="currentColor"
-                      d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
-                    ></path>
-                  </svg>
-                  Fantastic Day
-                </h4>
-                <div id="cardText" class="day-status-sub-title">
-                  <ul class="day-status-list most-popular">
-                    <li>Armor all professional</li>
-                    <li>Foam bath wash</li>
-                    <li>Wheel cleaner</li>
-                    <li>Triple Polish</li>
-                    <li>Rain-X Complete surface protectant</li>
-                    <li>
-                      Armor all professional extreme shine wax with carnauba
-                    </li>
-                    <li>Tire Shine</li>
-                    <li>Air Blow Dry</li>
-                  </ul>
+                  <div class="flex-1">
+                    <div class="fantastic-day-details-card">
+                      <h4 id="cardTitleFantasticDay" class="day-status">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          height="24"
+                          style="
+                            width: 16px;
+                            height: 16px;
+                            border: 1px solid;
+                            border-radius: 50%;
+                          "
+                        >
+                          <path fill="none" d="M0 0h24v24H0z"></path>
+                          <path
+                            fill="currentColor"
+                            d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+                          ></path>
+                        </svg>
+                        Fantastic Day
+                      </h4>
+                      <div
+                        id="cardTextFantasticDay"
+                        class="day-status-sub-title"
+                      >
+                        <ul class="day-status-list most-popular">
+                          <li>Armor all professional</li>
+                          <li>Foam bath wash</li>
+                          <li>Wheel cleaner</li>
+                          <li>Triple Polish</li>
+                          <li>Rain-X Complete surface protectant</li>
+                          <li>
+                            Armor all professional extreme shine wax with
+                            carnauba
+                          </li>
+                          <li>Tire Shine</li>
+                          <li>Air Blow Dry</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -476,9 +506,9 @@
               </div>
             </div>
           </section>
-          <section class="reveal-right flex-1">
-            <div class="day-status-details-card fantastic-day">
-              <h4 id="cardTitle" class="day-status">
+          <section class="flex-1">
+            <div class="fantastic-day-details-card">
+              <h4 id="cardTitleFantasticDay" class="day-status">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -499,7 +529,7 @@
                 </svg>
                 Fantastic Day
               </h4>
-              <div id="cardText" class="day-status-sub-title">
+              <div id="cardTextFantasticDay" class="day-status-sub-title">
                 <ul class="day-status-list most-popular">
                   <li>Armor all professional</li>
                   <li>Foam bath wash</li>
@@ -686,11 +716,11 @@
   @keyframes cardFadeSlide {
     from {
       opacity: 0;
-      transform: translateX(100px);
+      transform: translateY(100px);
     }
     to {
       opacity: 1;
-      transform: translateX(0);
+      transform: translateY(0);
     }
   }
   * {
@@ -963,16 +993,42 @@
 <script>
   const buttons = document.querySelectorAll('.info-btn');
   const buttonsMonthly = document.querySelectorAll('.info-btn-monthly');
-  const cardDayStatusDetails = document.querySelectorAll(
-    '.day-status-details-card',
+  // const cardDayStatusDetails = document.querySelectorAll(
+  //   '.day-status-details-card',
+  // );
+  const goodDayDetailsCard = document.querySelector('.good-day-details-card');
+  const happyDayDetailsCard = document.querySelector('.happy-day-details-card');
+  const beautifulDayDetailsCard = document.querySelector(
+    '.beautiful-day-details-card',
   );
-  const cardTitle = document.querySelectorAll('#cardTitle');
-  const cardText = document.querySelectorAll('#cardText');
+  const fantasticDayDetailsCard = document.querySelector(
+    '.fantastic-day-details-card',
+  );
+  const cardDayStatusDetails = [
+    goodDayDetailsCard,
+    happyDayDetailsCard,
+    beautifulDayDetailsCard,
+    fantasticDayDetailsCard,
+  ];
+  // const cardTitle = document.querySelectorAll('#cardTitle');
+  // const cardText = document.querySelectorAll('#cardText');
+  const cardTitleGoodDay = document.getElementById('cardTitleGoodDay');
+  const cardTitleHappyDay = document.getElementById('cardTitleHappyDay');
+  const cardTitleBeautifulDay = document.getElementById(
+    'cardTitleBeautifulDay',
+  );
+  const cardTitleFantasticDay = document.getElementById(
+    'cardTitleFantasticDay',
+  );
+  const cardTextGoodDay = document.getElementById('cardTextGoodDay');
+  const cardTextHappyDay = document.getElementById('cardTextHappyDay');
+  const cardTextBeautifulDay = document.getElementById('cardTextBeautifulDay');
+  const cardTextFantasticDay = document.getElementById('cardTextFantasticDay');
   // const cardTitle = document.getElementById('cardTitle');
-  const tooltipGoodDay = document.querySelector('.tooltip-good-day');
-  const tooltipHappyDay = document.querySelector('.tooltip-happy-day');
-  const tooltipBeautifulDay = document.querySelector('.tooltip-beautiful-day');
-  const tooltipFantasticDay = document.querySelector('.tooltip-fantastic-day');
+  // const tooltipGoodDay = document.querySelector('.tooltip-good-day');
+  // const tooltipHappyDay = document.querySelector('.tooltip-happy-day');
+  // const tooltipBeautifulDay = document.querySelector('.tooltip-beautiful-day');
+  // const tooltipFantasticDay = document.querySelector('.tooltip-fantastic-day');
 
   const contentData = {
     'good-day': {
@@ -1039,69 +1095,74 @@
     },
   };
 
-  function animateCard() {
+  function animateCard(button) {
+    console.log(button);
     cardDayStatusDetails.forEach((container) => {
       container.classList.remove('card-animate');
-    });
-    // force reflow so animation can restart
-    void cardDayStatusDetails[0].offsetWidth;
-    void cardDayStatusDetails[1].offsetWidth;
-
-    cardDayStatusDetails.forEach((container) => {
+      void container.offsetWidth; // force reflow
       container.classList.add('card-animate');
     });
+    // force reflow so animation can restart
+    // void cardDayStatusDetails[0].offsetWidth;
+    // void cardDayStatusDetails[1].offsetWidth;
+
+    // cardDayStatusDetails.forEach((container) => {
+    //   container.classList.add('card-animate');
+    // });
   }
 
   function activateButton(button) {
-    animateCard();
+    animateCard(button);
 
     buttons.forEach((btn) => btn.classList.remove('active'));
     // cardDayStatusDetails.classList.remove('fantastic-day');
 
     button.classList.add('active');
     buttons.forEach((btn) => (btn.style.width = ''));
+    cardDayStatusDetails.forEach((container) => {
+      container.style.display = 'none';
+    });
     button.style.width = '100%';
 
     const key = button.getAttribute('data-content');
 
     if (key === 'good-day') {
-      cardDayStatusDetails.forEach((container) => {
-        container.style.background = 'linear-gradient(90deg, #a4bee6, #ebf4f5)';
-      });
-      button.style.setProperty('--arrow-color', '#ebf4f5');
+      goodDayDetailsCard.style.display = 'block';
+      goodDayDetailsCard.style.background =
+        'linear-gradient(90deg, #a4bee6, #ebf4f5)';
 
-      // tooltipGoodDay.style.background =
-      //   'linear-gradient(90deg, #a4bee6, #ebf4f5)';
+      button.style.setProperty('--arrow-color', '#ebf4f5');
     } else if (key === 'happy-day') {
-      cardDayStatusDetails.forEach((container) => {
-        container.style.background = 'linear-gradient(90deg, #70960c, #fafa00)';
-      });
-      // tooltipHappyDay.style.background =
-      //   'linear-gradient(90deg, #70960c, #fafa00)';
+      happyDayDetailsCard.style.display = 'block';
+      happyDayDetailsCard.style.background =
+        'linear-gradient(90deg, #70960c, #fafa00)';
       button.style.setProperty('--arrow-color', '#fafa00');
     } else if (key === 'beautiful-day') {
-      cardDayStatusDetails.forEach((container) => {
-        container.style.background =
-          'linear-gradient(135deg, #ee5700, #eea300)';
-      });
-
+      beautifulDayDetailsCard.style.display = 'block';
+      beautifulDayDetailsCard.style.background =
+        'linear-gradient(135deg, #ee5700, #eea300)';
       button.style.setProperty('--arrow-color', '#eea300');
     } else if (key === 'fantastic-day') {
-      cardDayStatusDetails.forEach((container) => {
-        container.classList.add('fantastic-day');
-        container.style.background = 'linear-gradient(90deg, #5fc52e, #6eee87)';
-      });
+      fantasticDayDetailsCard.style.display = 'block';
+      fantasticDayDetailsCard.style.background =
+        'linear-gradient(90deg, #5fc52e, #6eee87)';
 
       button.style.setProperty('--arrow-color', '#6eee87');
     }
 
-    cardTitle.forEach((title) => {
-      title.innerHTML = contentData[key].title;
-    });
-
-    cardText.forEach((text) => {
-      text.innerHTML = contentData[key].text;
-    });
+    if (key === 'good-day') {
+      cardTitleGoodDay.innerHTML = contentData[key].title;
+      cardTextGoodDay.innerHTML = contentData[key].text;
+    } else if (key === 'happy-day') {
+      cardTitleHappyDay.innerHTML = contentData[key].title;
+      cardTextHappyDay.innerHTML = contentData[key].text;
+    } else if (key === 'beautiful-day') {
+      cardTitleBeautifulDay.innerHTML = contentData[key].title;
+      cardTextBeautifulDay.innerHTML = contentData[key].text;
+    } else if (key === 'fantastic-day') {
+      cardTitleFantasticDay.innerHTML = contentData[key].title;
+      cardTextFantasticDay.innerHTML = contentData[key].text;
+    }
   }
 
   let currentIndex = 0;
@@ -1168,20 +1229,20 @@
   revealElements.forEach((el) => observer.observe(el));
 </script>
 <script async>
-  var animateButton = function (e) {
-    e.preventDefault();
-    //reset animation
-    e.target.classList.remove('animate');
+  // var animateButton = function (e) {
+  //   e.preventDefault();
+  //   //reset animation
+  //   e.target.classList.remove('animate');
 
-    e.target.classList.add('animate');
-    setTimeout(function () {
-      e.target.classList.remove('animate');
-    }, 700);
-  };
+  //   e.target.classList.add('animate');
+  //   setTimeout(function () {
+  //     e.target.classList.remove('animate');
+  //   }, 700);
+  // };
 
-  var bubblyButtons = document.getElementsByClassName('bubbly-button');
+  // var bubblyButtons = document.getElementsByClassName('bubbly-button');
 
-  for (var i = 0; i < bubblyButtons.length; i++) {
-    bubblyButtons[i].addEventListener('click', animateButton, false);
-  }
+  // for (var i = 0; i < bubblyButtons.length; i++) {
+  //   bubblyButtons[i].addEventListener('click', animateButton, false);
+  // }
 </script>
