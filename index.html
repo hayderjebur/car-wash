@@ -341,52 +341,50 @@
               </button>
             </div>
           </div> -->
-          <!-- Single Wash Menu Card -->
+
           <div class="card-wrapper">
             <div class="day-status-monthly-container flex-1">
               <h3 class="day-status-title">Monthly Wash Menu</h3>
 
               <div class="day-status-list">
-                <div class="flex-1">
+                <!-- Monthly Good Day -->
+                <div class="flex-1" style="margin-bottom: 1rem">
                   <button class="info-btn good-day" data-content="good-day">
                     Good Day: <span class="price">$25/month</span>
                   </button>
-                  <div class="good-day-details-card">
+                  <div id="cardDetailsGoodDay" style="display: none">
                     <h4 id="cardTitleGoodDay" class="day-status"></h4>
-                    <div
-                      id="cardTextGoodDay"
-                      class="day-status-sub-title"
-                    ></div>
+                    <div id="cardTextGoodDay" class="card-details-text"></div>
                   </div>
                 </div>
-                <div class="flex-1">
+                <!-- Monthly Happy Day -->
+                <div class="flex-1" style="margin-bottom: 1rem">
                   <button class="info-btn happy-day" data-content="happy-day">
                     Happy Day: <span class="price">$30/month</span>
                   </button>
-                  <div class="happy-day-details-card">
+                  <div id="cardDetailsHappyDay" style="display: none">
                     <h4 id="cardTitleHappyDay" class="day-status"></h4>
-                    <div
-                      id="cardTextHappyDay"
-                      class="day-status-sub-title"
-                    ></div>
+                    <div id="cardTextHappyDay" class="card-details-text"></div>
                   </div>
                 </div>
-                <div class="flex-1">
+                <!-- Monthly Beautiful Day -->
+                <div class="flex-1" style="margin-bottom: 1rem">
                   <button
                     class="info-btn beautiful-day"
                     data-content="beautiful-day"
                   >
                     Beautiful Day: <span class="price">$35/month</span>
                   </button>
-                  <div class="beautiful-day-details-card">
+                  <div id="cardDetailsBeautifulDay" style="display: none">
                     <h4 id="cardTitleBeautifulDay" class="day-status"></h4>
                     <div
                       id="cardTextBeautifulDay"
-                      class="day-status-sub-title"
+                      class="card-details-text"
                     ></div>
                   </div>
                 </div>
-                <div class="info-btn-wrapper">
+                <!--Monthly Fantastic Day -->
+                <div>
                   <button
                     class="info-btn fantastic-day active"
                     data-content="fantastic-day"
@@ -394,17 +392,16 @@
                   >
                     Fantastic Day: <span class="price">$40/month</span>
                   </button>
-                  <div class="flex-1">
-                    <div class="fantastic-day-details-card">
-                      <h4 id="cardTitleFantasticDay" class="day-status">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 24 24"
-                          width="24"
-                          height="24"
-                          style="
-                            width: 16px;
-                            height: 16px;
+                  <div id="cardDetailsFantasticDay">
+                    <h4 id="cardTitleFantasticDay" class="day-status">
+                      <!-- <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                        style="
+                          width: 16px;
+                          height: 16px;
                             border: 1px solid;
                             border-radius: 50%;
                           "
@@ -414,27 +411,22 @@
                             fill="currentColor"
                             d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
                           ></path>
-                        </svg>
-                        Fantastic Day
-                      </h4>
-                      <div
-                        id="cardTextFantasticDay"
-                        class="day-status-sub-title"
-                      >
-                        <ul class="day-status-list most-popular">
-                          <li>Armor all professional</li>
-                          <li>Foam bath wash</li>
-                          <li>Wheel cleaner</li>
-                          <li>Triple Polish</li>
-                          <li>Rain-X Complete surface protectant</li>
-                          <li>
-                            Armor all professional extreme shine wax with
-                            carnauba
-                          </li>
-                          <li>Tire Shine</li>
-                          <li>Air Blow Dry</li>
-                        </ul>
-                      </div>
+                        </svg> -->
+                      Fantastic Day Details
+                    </h4>
+                    <div id="cardTextFantasticDay" class="card-details-text">
+                      <ul class="day-status-list most-popular">
+                        <li>Armor all professional</li>
+                        <li>Foam bath wash</li>
+                        <li>Wheel cleaner</li>
+                        <li>Triple Polish</li>
+                        <li>Rain-X Complete surface protectant</li>
+                        <li>
+                          Armor all professional extreme shine wax with carnauba
+                        </li>
+                        <li>Tire Shine</li>
+                        <li>Air Blow Dry</li>
+                      </ul>
                     </div>
                   </div>
                 </div>
@@ -446,6 +438,7 @@
       <!-- End Monthly  -->
 
       <!-- Single Wash -->
+
       <section
         style="
           background: #4ade80;
@@ -478,10 +471,10 @@
           designed to give your vehicle a fresh, sparkling appearance.
         </p>
         <div class="card-wrapper">
-          <section class="day-status-single-container flex-1 reveal-left">
-            <h3 class="day-status-title">Single Wash Menu</h3>
+          <section class="flex-1">
+            <!-- <h3 class="day-status-title">Single Wash Menu</h3> -->
 
-            <div class="day-status-list">
+            <!-- <div class="day-status-list">
               <button class="info-btn good-day" data-content="good-day">
                 Good Day: <span class="price">$12/day</span>
               </button>
@@ -501,47 +494,98 @@
                   data-content="fantastic-day"
                   style="width: 100%"
                 >
-                  Fantastic Day: <span class="price">$18/day</span>
+                  Fantastic Day:
+                  <span class="price"
+                    >$18/day <img src="./h.svg" width="20" height="20"
+                  /></span>
                 </button>
               </div>
-            </div>
-          </section>
-          <section class="flex-1">
-            <div class="fantastic-day-details-card">
-              <h4 id="cardTitleFantasticDay" class="day-status">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  height="24"
-                  style="
-                    width: 16px;
-                    height: 16px;
-                    border: 1px solid;
-                    border-radius: 50%;
-                  "
-                >
-                  <path fill="none" d="M0 0h24v24H0z"></path>
-                  <path
-                    fill="currentColor"
-                    d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
-                  ></path>
-                </svg>
-                Fantastic Day
-              </h4>
-              <div id="cardTextFantasticDay" class="day-status-sub-title">
-                <ul class="day-status-list most-popular">
-                  <li>Armor all professional</li>
-                  <li>Foam bath wash</li>
-                  <li>Wheel cleaner</li>
-                  <li>Triple Polish</li>
-                  <li>Rain-X Complete surface protectant</li>
-                  <li>
-                    Armor all professional extreme shine wax with carnauba
-                  </li>
-                  <li>Tire Shine</li>
-                  <li>Air Blow Dry</li>
-                </ul>
+            </div> -->
+            <div class="card-wrapper">
+              <div class="day-status-monthly-container flex-1">
+                <div class="day-status-list">
+                  <!-- Single Good Day -->
+                  <div class="flex-1" style="margin-bottom: 1rem">
+                    <button class="info-btn good-day" data-content="good-day">
+                      Good Day: <span class="price">$25/month</span>
+                    </button>
+                    <div id="singleCardDetailsGoodDay" style="display: none">
+                      <h4 id="singleCardTitleGoodDay" class="day-status"></h4>
+                      <div
+                        id="singleCardTextGoodDay"
+                        class="card-details-text"
+                      ></div>
+                    </div>
+                  </div>
+                  <!-- Single Happy Day -->
+                  <div class="flex-1" style="margin-bottom: 1rem">
+                    <button class="info-btn happy-day" data-content="happy-day">
+                      Happy Day: <span class="price">$30/month</span>
+                    </button>
+                    <div id="singleCardDetailsHappyDay" style="display: none">
+                      <h4 id="singleCardTitleHappyDay" class="day-status"></h4>
+                      <div
+                        id="singleCardTextHappyDay"
+                        class="card-details-text"
+                      ></div>
+                    </div>
+                  </div>
+                  <!-- Single Beautiful Day -->
+                  <div class="flex-1" style="margin-bottom: 1rem">
+                    <button
+                      class="info-btn beautiful-day"
+                      data-content="beautiful-day"
+                    >
+                      Beautiful Day: <span class="price">$35/month</span>
+                    </button>
+                    <div
+                      id="singleCardDetailsBeautifulDay"
+                      style="display: none"
+                    >
+                      <h4
+                        id="singleCardTitleBeautifulDay"
+                        class="day-status"
+                      ></h4>
+                      <div
+                        id="singleCardTextBeautifulDay"
+                        class="card-details-text"
+                      ></div>
+                    </div>
+                  </div>
+                  <!-- Single Fantastic Day -->
+                  <div>
+                    <button
+                      class="info-btn fantastic-day active"
+                      data-content="fantastic-day"
+                      style="width: 100%"
+                    >
+                      Fantastic Day: <span class="price">$40/month</span>
+                    </button>
+                    <div id="singleCardDetailsFantasticDay">
+                      <h4 id="singleCardTitleFantasticDay" class="day-status">
+                        Fantastic Day Details
+                      </h4>
+                      <div
+                        id="singleCardTextFantasticDay"
+                        class="card-details-text"
+                      >
+                        <ul class="day-status-list most-popular">
+                          <li>Armor all professional</li>
+                          <li>Foam bath wash</li>
+                          <li>Wheel cleaner</li>
+                          <li>Triple Polish</li>
+                          <li>Rain-X Complete surface protectant</li>
+                          <li>
+                            Armor all professional extreme shine wax with
+                            carnauba
+                          </li>
+                          <li>Tire Shine</li>
+                          <li>Air Blow Dry</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
@@ -665,7 +709,7 @@
   }
 
   /* Tooltip styling */
-  .tooltip {
+  /* .tooltip {
     position: absolute;
     left: 100%;
     top: 50%;
@@ -682,10 +726,10 @@
     z-index: 99999;
     font-family: sans-serif;
     font-weight: 600;
-  }
+  } */
 
   /* Arrow */
-  .tooltip::after {
+  /* .tooltip::after {
     content: '';
     position: absolute;
     top: 45%;
@@ -694,7 +738,7 @@
     border-width: 6px;
     border-style: solid;
     border-color: transparent rgb(1 55 143) transparent transparent;
-  }
+  } */
 
   /* Show on hover */
   .membership:hover .tooltip {
@@ -710,17 +754,18 @@
 </style>
 <style>
   .card-animate {
-    animation: cardFadeSlide ease-in-out 1s forwards;
+    animation: cardFadeSlide ease-in-out 0.6s forwards;
+    border-radius: 12px;
   }
 
   @keyframes cardFadeSlide {
     from {
       opacity: 0;
-      transform: translateY(100px);
+      transform: translateY(0);
     }
     to {
       opacity: 1;
-      transform: translateY(0);
+      transform: translateY(5px);
     }
   }
   * {
@@ -785,17 +830,17 @@
     margin: 0 8px 0 0;
     border-radius: 12px;
     padding: 10px 5px;
-    background: linear-gradient(120deg, #0d41e1, #07c8f9);
+    /* background: linear-gradient(120deg, #0d41e1, #07c8f9); */
     border-radius: 16px;
     box-shadow: 0 15px 45px 0 rgba(0, 0, 0, 0.15);
     position: relative;
-    /* background-image: linear-gradient(
+    background-image: linear-gradient(
       135deg,
       rgba(74, 222, 128, 0.15),
       rgba(29, 123, 219, 0.1) 20%,
       rgba(0, 212, 255, 1) 40%,
       #0d41e1 100%
-    ); */
+    );
   }
   .day-status-single-container {
     background: linear-gradient(120deg, #32cd32, #07c8f9);
@@ -819,7 +864,7 @@
     background-color: #41ee3b;
     text-align: center;
     right: 2px;
-    bottom: 6px;
+    /* bottom: 6px; */
     height: 65px;
     width: 65px;
     border-radius: 50%;
@@ -838,17 +883,19 @@
     font-family: 'Changa One', sans-serif;
     font-weight: 400;
     font-style: normal;
-    color: #fff;
+    color: #01378f;
   }
-  .day-status-sub-title {
+  #cardDetailsFantasticDay {
+    background: linear-gradient(90deg, #5fc52e, #6eee87);
+  }
+  .card-details-text {
     font-size: 16px;
     margin: 10px 0 0 18px;
     /* font-family: 'Changa One', sans-serif; */
     font-weight: 600;
     font-style: normal;
     text-transform: capitalize;
-
-    /* color: #fff; */
+    padding: 0.3rem;
   }
   .day-status-list {
     display: flex;
@@ -867,12 +914,12 @@
     font-size: 20px;
     font-family: 'Changa One', sans-serif;
     cursor: pointer;
-    text-transform: uppercase;
+
     width: 100%;
     margin: 0;
     padding: 3px 0;
     text-align: center;
-    border-bottom: 2px solid #01378f;
+    /* border-bottom: 2px solid #01378f; */
   }
   .good-day {
     background: linear-gradient(90deg, #a4bee6, #ebf4f5);
@@ -894,7 +941,7 @@
     font-size: 20px;
   }
   .info-btn {
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
   }
   .info-btn,
   .info-btn-monthly {
@@ -924,7 +971,7 @@
     position: relative;
   }
 
-  .info-btn-wrapper:has(.info-btn.active)::after {
+  /* .info-btn-wrapper:has(.info-btn.active)::after {
     content: '';
     border: 14px solid;
     border-color: transparent transparent transparent
@@ -932,7 +979,7 @@
     position: absolute;
     top: 3px;
     right: -27px;
-  }
+  } */
 
   @media only screen and (max-width: 800px) {
     .container {
@@ -992,26 +1039,61 @@
 
 <script>
   const buttons = document.querySelectorAll('.info-btn');
-  const buttonsMonthly = document.querySelectorAll('.info-btn-monthly');
-  // const cardDayStatusDetails = document.querySelectorAll(
-  //   '.day-status-details-card',
-  // );
-  const goodDayDetailsCard = document.querySelector('.good-day-details-card');
-  const happyDayDetailsCard = document.querySelector('.happy-day-details-card');
+  // const buttonsMonthly = document.querySelectorAll('.info-btn-monthly');
+  const goodDayDetailsCard = document.querySelector('#cardDetailsGoodDay');
+  const happyDayDetailsCard = document.querySelector('#cardDetailsHappyDay');
   const beautifulDayDetailsCard = document.querySelector(
-    '.beautiful-day-details-card',
+    '#cardDetailsBeautifulDay',
   );
   const fantasticDayDetailsCard = document.querySelector(
-    '.fantastic-day-details-card',
+    '#cardDetailsFantasticDay',
   );
+
+  const singleGoodDayText = document.querySelector('#singleCardTextGoodDay');
+  const singleHappyDayText = document.querySelector('#singleCardTextHappyDay');
+  const singleBeautifulDayText = document.querySelector(
+    '#singleCardTextBeautifulDay',
+  );
+  const singleFantasticDayText = document.querySelector(
+    '#singleCardTextFantasticDay',
+  );
+  const singleGoodDayDetailsCard = document.querySelector(
+    '#singleCardDetailsGoodDay',
+  );
+  const singleHappyDayDetailsCard = document.querySelector(
+    '#singleCardDetailsHappyDay',
+  );
+  const singleBeautifulDayDetailsCard = document.querySelector(
+    '#singleCardDetailsBeautifulDay',
+  );
+  const singleFantasticDayDetailsCard = document.querySelector(
+    '#singleCardDetailsFantasticDay',
+  );
+  const singleCardTitleGoodDay = document.querySelector(
+    '#singleCardTitleGoodDay',
+  );
+  const singleCardTitleHappyDay = document.querySelector(
+    '#singleCardTitleHappyDay',
+  );
+  const singleCardTitleBeautifulDay = document.querySelector(
+    '#singleCardTitleBeautifulDay',
+  );
+  const singleCardTitleFantasticDay = document.querySelector(
+    '#singleCardTitleFantasticDay',
+  );
+
   const cardDayStatusDetails = [
     goodDayDetailsCard,
     happyDayDetailsCard,
     beautifulDayDetailsCard,
     fantasticDayDetailsCard,
+
+    singleGoodDayDetailsCard,
+    singleHappyDayDetailsCard,
+    singleBeautifulDayDetailsCard,
+    singleFantasticDayDetailsCard,
   ];
-  // const cardTitle = document.querySelectorAll('#cardTitle');
-  // const cardText = document.querySelectorAll('#cardText');
+
   const cardTitleGoodDay = document.getElementById('cardTitleGoodDay');
   const cardTitleHappyDay = document.getElementById('cardTitleHappyDay');
   const cardTitleBeautifulDay = document.getElementById(
@@ -1020,26 +1102,34 @@
   const cardTitleFantasticDay = document.getElementById(
     'cardTitleFantasticDay',
   );
+
   const cardTextGoodDay = document.getElementById('cardTextGoodDay');
   const cardTextHappyDay = document.getElementById('cardTextHappyDay');
   const cardTextBeautifulDay = document.getElementById('cardTextBeautifulDay');
   const cardTextFantasticDay = document.getElementById('cardTextFantasticDay');
-  // const cardTitle = document.getElementById('cardTitle');
-  // const tooltipGoodDay = document.querySelector('.tooltip-good-day');
-  // const tooltipHappyDay = document.querySelector('.tooltip-happy-day');
-  // const tooltipBeautifulDay = document.querySelector('.tooltip-beautiful-day');
-  // const tooltipFantasticDay = document.querySelector('.tooltip-fantastic-day');
+  const singleCardTextGoodDay = document.getElementById(
+    'singleCardTextGoodDay',
+  );
+  const singleCardTextHappyDay = document.getElementById(
+    'singleCardTextHappyDay',
+  );
+  const singleCardTextBeautifulDay = document.getElementById(
+    'singleCardTextBeautifulDay',
+  );
+  const singleCardTextFantasticDay = document.getElementById(
+    'singleCardTextFantasticDay',
+  );
 
   const contentData = {
     'good-day': {
-      title: 'Good Day',
+      title: 'Good Day Includes',
       text: `<ul class="day-status-list">
                       <li>Foam bath wash</li>
                       <li>Air Blow Dry</li>
         </ul>`,
     },
     'happy-day': {
-      title: 'Happy Day',
+      title: 'Happy Day Includes',
       text: `<ul class="day-status-list">
                       <li>Foam bath wash</li>
                       <li>Wheel cleaner</li>
@@ -1048,7 +1138,7 @@
         </ul>`,
     },
     'beautiful-day': {
-      title: 'Beautiful Day',
+      title: 'Beautiful Day Includes',
       text: `<ul class="day-status-list">
            <li>Foam bath wash</li>
                       <li>Wheel cleaner</li>
@@ -1079,7 +1169,7 @@
                     d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
                   ></path>
                 </svg>
-        Fantastic Day`,
+        Fantastic Day Includes`,
       text: `<ul class="day-status-list most-popular">
            <li>Armor all professional</li>
                       <li>Foam bath wash</li>
@@ -1095,11 +1185,11 @@
     },
   };
 
-  function animateCard(button) {
-    console.log(button);
+  function animateCard() {
     cardDayStatusDetails.forEach((container) => {
-      container.classList.remove('card-animate');
+      // container.classList.remove('card-animate');
       void container.offsetWidth; // force reflow
+      container.style.display = 'none';
       container.classList.add('card-animate');
     });
     // force reflow so animation can restart
@@ -1112,56 +1202,72 @@
   }
 
   function activateButton(button) {
-    animateCard(button);
+    animateCard();
 
     buttons.forEach((btn) => btn.classList.remove('active'));
     // cardDayStatusDetails.classList.remove('fantastic-day');
 
     button.classList.add('active');
     buttons.forEach((btn) => (btn.style.width = ''));
-    cardDayStatusDetails.forEach((container) => {
-      container.style.display = 'none';
-    });
+    // cardDayStatusDetails.forEach((container) => {
+    //   container.style.display = 'none';
+    // });
+
     button.style.width = '100%';
 
     const key = button.getAttribute('data-content');
 
     if (key === 'good-day') {
       goodDayDetailsCard.style.display = 'block';
+
       goodDayDetailsCard.style.background =
         'linear-gradient(90deg, #a4bee6, #ebf4f5)';
+      cardTitleGoodDay.innerHTML = contentData[key].title;
+      cardTextGoodDay.innerHTML = contentData[key].text;
+      singleGoodDayDetailsCard.style.display = 'block';
+      singleGoodDayDetailsCard.style.background =
+        'linear-gradient(90deg, #a4bee6, #ebf4f5)';
 
-      button.style.setProperty('--arrow-color', '#ebf4f5');
+      singleCardTitleGoodDay.innerHTML = contentData[key].title;
+      singleCardTextGoodDay.innerHTML = contentData[key].text;
+
+      // button.style.setProperty('--arrow-color', '#ebf4f5');
     } else if (key === 'happy-day') {
       happyDayDetailsCard.style.display = 'block';
       happyDayDetailsCard.style.background =
         'linear-gradient(90deg, #70960c, #fafa00)';
-      button.style.setProperty('--arrow-color', '#fafa00');
+      cardTitleHappyDay.innerHTML = contentData[key].title;
+      cardTextHappyDay.innerHTML = contentData[key].text;
+
+      singleHappyDayDetailsCard.style.display = 'block';
+      singleHappyDayDetailsCard.style.background =
+        'linear-gradient(90deg, #70960c, #fafa00)';
+      singleHappyDayText.innerHTML = contentData[key].text;
+      singleCardTitleHappyDay.innerHTML = contentData[key].title;
     } else if (key === 'beautiful-day') {
       beautifulDayDetailsCard.style.display = 'block';
       beautifulDayDetailsCard.style.background =
         'linear-gradient(135deg, #ee5700, #eea300)';
-      button.style.setProperty('--arrow-color', '#eea300');
+      cardTitleBeautifulDay.innerHTML = contentData[key].title;
+      cardTextBeautifulDay.innerHTML = contentData[key].text;
+
+      singleBeautifulDayDetailsCard.style.display = 'block';
+      singleBeautifulDayDetailsCard.style.background =
+        'linear-gradient(135deg, #ee5700, #eea300)';
+
+      singleBeautifulDayText.innerHTML = contentData[key].text;
+      singleCardTitleBeautifulDay.innerHTML = contentData[key].title;
     } else if (key === 'fantastic-day') {
       fantasticDayDetailsCard.style.display = 'block';
       fantasticDayDetailsCard.style.background =
         'linear-gradient(90deg, #5fc52e, #6eee87)';
-
-      button.style.setProperty('--arrow-color', '#6eee87');
-    }
-
-    if (key === 'good-day') {
-      cardTitleGoodDay.innerHTML = contentData[key].title;
-      cardTextGoodDay.innerHTML = contentData[key].text;
-    } else if (key === 'happy-day') {
-      cardTitleHappyDay.innerHTML = contentData[key].title;
-      cardTextHappyDay.innerHTML = contentData[key].text;
-    } else if (key === 'beautiful-day') {
-      cardTitleBeautifulDay.innerHTML = contentData[key].title;
-      cardTextBeautifulDay.innerHTML = contentData[key].text;
-    } else if (key === 'fantastic-day') {
       cardTitleFantasticDay.innerHTML = contentData[key].title;
       cardTextFantasticDay.innerHTML = contentData[key].text;
+
+      singleFantasticDayDetailsCard.style.display = 'block';
+
+      singleFantasticDayText.innerHTML = contentData[key].text;
+      singleCardTitleFantasticDay.innerHTML = contentData[key].title;
     }
   }
 
