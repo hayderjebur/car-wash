@@ -202,7 +202,11 @@
                       </g>
                     </svg>
                   </button>
-                  <div id="cardDetailsGoodDay" style="display: none">
+                  <div
+                    id="cardDetailsGoodDay"
+                    class="card-style"
+                    style="display: none"
+                  >
                     <h4 id="cardTitleGoodDay" class="day-status"></h4>
                     <div id="cardTextGoodDay" class="card-details-text"></div>
                   </div>
@@ -234,7 +238,11 @@
                       </g>
                     </svg>
                   </button>
-                  <div id="cardDetailsHappyDay" style="display: none">
+                  <div
+                    id="cardDetailsHappyDay"
+                    class="card-style"
+                    style="display: none"
+                  >
                     <h4 id="cardTitleHappyDay" class="day-status"></h4>
                     <div id="cardTextHappyDay" class="card-details-text"></div>
                   </div>
@@ -269,7 +277,11 @@
                       </g>
                     </svg>
                   </button>
-                  <div id="cardDetailsBeautifulDay" style="display: none">
+                  <div
+                    id="cardDetailsBeautifulDay"
+                    class="card-style"
+                    style="display: none"
+                  >
                     <h4 id="cardTitleBeautifulDay" class="day-status"></h4>
                     <div
                       id="cardTextBeautifulDay"
@@ -282,7 +294,6 @@
                   <button
                     class="info-btn fantastic-day active"
                     data-content="fantastic-day"
-                    style="width: 100%"
                   >
                     Fantastic Day: $40/month
                     <svg
@@ -308,7 +319,7 @@
                       </g>
                     </svg>
                   </button>
-                  <div id="cardDetailsFantasticDay">
+                  <div id="cardDetailsFantasticDay" class="card-style">
                     <h4 id="cardTitleFantasticDay" class="day-status">
                       <!-- <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -418,7 +429,11 @@
                         </g>
                       </svg>
                     </button>
-                    <div id="singleCardDetailsGoodDay" style="display: none">
+                    <div
+                      id="singleCardDetailsGoodDay"
+                      class="card-style"
+                      style="display: none"
+                    >
                       <h4 id="singleCardTitleGoodDay" class="day-status"></h4>
                       <div
                         id="singleCardTextGoodDay"
@@ -453,7 +468,11 @@
                         </g>
                       </svg>
                     </button>
-                    <div id="singleCardDetailsHappyDay" style="display: none">
+                    <div
+                      id="singleCardDetailsHappyDay"
+                      class="card-style"
+                      style="display: none"
+                    >
                       <h4 id="singleCardTitleHappyDay" class="day-status"></h4>
                       <div
                         id="singleCardTextHappyDay"
@@ -493,6 +512,7 @@
                     </button>
                     <div
                       id="singleCardDetailsBeautifulDay"
+                      class="card-style"
                       style="display: none"
                     >
                       <h4
@@ -510,7 +530,6 @@
                     <button
                       class="info-btn fantastic-day active"
                       data-content="fantastic-day"
-                      style="width: 50%"
                     >
                       Fantastic Day: $18/month
                       <svg
@@ -536,7 +555,7 @@
                         </g>
                       </svg>
                     </button>
-                    <div id="singleCardDetailsFantasticDay">
+                    <div id="singleCardDetailsFantasticDay" class="card-style">
                       <h4 id="singleCardTitleFantasticDay" class="day-status">
                         Fantastic Day Details
                       </h4>
@@ -734,7 +753,10 @@
 <style>
   .card-animate {
     animation: cardFadeSlide ease-in-out 0.6s forwards;
+  }
+  .card-style {
     border-radius: 12px;
+    margin-top: 0.3rem;
   }
 
   @keyframes cardFadeSlide {
@@ -843,7 +865,7 @@
     display: block;
     background-color: #41ee3b;
     text-align: center;
-    right: 2px;
+    right: 9px;
     /* bottom: 6px; */
     height: 65px;
     width: 65px;
@@ -866,7 +888,10 @@
     color: #01378f;
   }
   #cardDetailsFantasticDay {
-    background: linear-gradient(90deg, #5fc52e, #6eee87);
+    background: linear-gradient(90deg, #339006, #6eee87);
+  }
+  #singleCardDetailsFantasticDay {
+    background: linear-gradient(90deg, #339006, #6eee87);
   }
   .card-details-text {
     font-size: 16px;
@@ -1214,13 +1239,13 @@
       goodDayDetailsCard.style.display = 'block';
 
       goodDayDetailsCard.style.background =
-        'linear-gradient(90deg, #a4bee6, #ebf4f5)';
+        'linear-gradient(90deg, rgb(127 165 223), rgb(235, 244, 245))';
       cardTitleGoodDay.innerHTML = contentData[key].title;
       cardTextGoodDay.innerHTML = contentData[key].text;
+
       singleGoodDayDetailsCard.style.display = 'block';
       singleGoodDayDetailsCard.style.background =
-        'linear-gradient(90deg, #a4bee6, #ebf4f5)';
-
+        'linear-gradient(90deg, rgb(127 165 223), rgb(235, 244, 245))';
       singleCardTitleGoodDay.innerHTML = contentData[key].title;
       singleCardTextGoodDay.innerHTML = contentData[key].text;
 
@@ -1252,12 +1277,14 @@
       singleCardTitleBeautifulDay.innerHTML = contentData[key].title;
     } else if (key === 'fantastic-day') {
       fantasticDayDetailsCard.style.display = 'block';
-      fantasticDayDetailsCard.style.background =
-        'linear-gradient(90deg, #5fc52e, #6eee87)';
+      // fantasticDayDetailsCard.style.background =
+      //   'linear-gradient(90deg, #5fc52e, #6eee87)';
       cardTitleFantasticDay.innerHTML = contentData[key].title;
       cardTextFantasticDay.innerHTML = contentData[key].text;
 
       singleFantasticDayDetailsCard.style.display = 'block';
+      // singleFantasticDayDetailsCard.style.background =
+      //   'linear-gradient(90deg, #5fc52e, #6eee87)';
 
       singleFantasticDayText.innerHTML = contentData[key].text;
       singleCardTitleFantasticDay.innerHTML = contentData[key].title;
