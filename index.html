@@ -173,7 +173,7 @@
             <div class="day-status-monthly-container flex-1">
               <h3 class="day-status-title">Monthly Wash Menu</h3>
 
-              <div class="day-status-list">
+              <div class="day-status-list reveal-left">
                 <!-- Monthly Good Day -->
                 <div class="flex-1" style="margin-bottom: 1rem">
                   <button class="info-btn good-day" data-content="good-day">
@@ -319,26 +319,11 @@
                       </g>
                     </svg>
                   </button>
-                  <div id="cardDetailsFantasticDay" class="card-style">
+                  <div
+                    id="cardDetailsFantasticDay"
+                    class="card-style reveal-right"
+                  >
                     <h4 id="cardTitleFantasticDay" class="day-status">
-                      <!-- <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        height="24"
-                        style="
-                          width: 16px;
-                          height: 16px;
-                            border: 1px solid;
-                            border-radius: 50%;
-                          "
-                        >
-                          <path fill="none" d="M0 0h24v24H0z"></path>
-                          <path
-                            fill="currentColor"
-                            d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
-                          ></path>
-                        </svg> -->
                       Fantastic Day Details
                     </h4>
                     <div id="cardTextFantasticDay" class="card-details-text">
@@ -401,7 +386,7 @@
           <section class="flex-1">
             <div class="card-wrapper">
               <div class="day-status-monthly-container flex-1">
-                <div class="day-status-list">
+                <div class="day-status-list reveal-right">
                   <!-- Single Good Day -->
                   <div class="flex-1" style="margin-bottom: 1rem">
                     <button class="info-btn good-day" data-content="good-day">
@@ -530,6 +515,7 @@
                     <button
                       class="info-btn fantastic-day active"
                       data-content="fantastic-day"
+                      style="width: 45%"
                     >
                       Fantastic Day: $18/month
                       <svg
@@ -555,7 +541,10 @@
                         </g>
                       </svg>
                     </button>
-                    <div id="singleCardDetailsFantasticDay" class="card-style">
+                    <div
+                      id="singleCardDetailsFantasticDay"
+                      class="card-style reveal-left"
+                    >
                       <h4 id="singleCardTitleFantasticDay" class="day-status">
                         Fantastic Day Details
                       </h4>
@@ -915,7 +904,7 @@
     margin: 0;
     padding: 3px 0;
     text-align: center;
-    /* border-bottom: 2px solid #01378f; */
+    border-bottom: 2px solid #01378f;
   }
   .good-day {
     background: linear-gradient(90deg, #a4bee6, #ebf4f5);
@@ -928,7 +917,7 @@
   }
   .fantastic-day {
     background: linear-gradient(90deg, #5fc52e, #6eee87);
-    width: 100%;
+    width: 45%;
   }
 
   .price {
@@ -945,7 +934,7 @@
     font-weight: bold;
     border-radius: 5px;
     padding: 5px 5px 8px;
-    width: fit-content;
+    /* width: fit-content; */
     color: #01378f;
     font-size: 18px;
     text-align: left;
@@ -1290,27 +1279,6 @@
       activateButton(button);
     });
   });
-
-  // buttonsMonthly.forEach((button) => {
-  //   const key = button.getAttribute('data-content');
-  //   if (key === 'good-day') {
-  //     tooltipGoodDay.style.background =
-  //       'linear-gradient(90deg, #a4bee6, #ebf4f5)';
-  //     button.style.setProperty('--arrow-color', '#ebf4f5');
-  //   } else if (key === 'happy-day') {
-  //     tooltipHappyDay.style.background =
-  //       'linear-gradient(90deg, #70960c, #fafa00)';
-  //     button.style.setProperty('--arrow-color', '#fafa00');
-  //   } else if (key === 'beautiful-day') {
-  //     tooltipBeautifulDay.style.background =
-  //       'linear-gradient(135deg, #ee5700, #eea300)';
-  //     button.style.setProperty('--arrow-color', '#eea300');
-  //   } else if (key === 'fantastic-day') {
-  //     tooltipFantasticDay.style.background =
-  //       'linear-gradient(90deg, #5fc52e, #6eee87)';
-  //     button.style.setProperty('--arrow-color', '#6eee87');
-  //   }
-  // });
 </script>
 <script>
   const revealElements = document.querySelectorAll(
