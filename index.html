@@ -602,6 +602,7 @@
             highest quality of products as well as well-maintained equipment to
             help keep your vehicles looking their best.
           </p>
+
           <img
             src="./bmw.jpg"
             alt="Car Wash Menu"
@@ -664,92 +665,17 @@
             employees who have been with us for many years, and not to mention
             our affordable pricing, there is no reason to not give us a try! We
             are looking forward to seeng you and having you join our family of
-            customers.
+            customers.<br />
+            <strong
+              >We look forward to seeing you and having you join our family of
+              customers!</strong
+            >
           </p>
         </section>
       </div>
     </main>
   </body>
 </html>
-<style>
-  .membership-title {
-    text-align: center;
-    line-height: 1.4;
-    margin-bottom: 30px;
-  }
-
-  .pill {
-    display: inline-block;
-    padding: 8px 18px;
-    border-radius: 18px;
-    font-weight: 800;
-    color: white;
-    margin: 6px 4px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  }
-
-  /* Colors matching logo */
-  .pill.blue {
-    background: linear-gradient(135deg, #1d7df2, #4db3ff);
-  }
-
-  .pill.green {
-    background: linear-gradient(135deg, #41b649, #7be67f);
-  }
-
-  .pill.orange {
-    background: linear-gradient(135deg, #f28c00, #ffb347);
-  }
-  .membership {
-    /* position: relative; */
-    display: inline-block;
-    margin-bottom: 7px;
-  }
-
-  /* Tooltip styling */
-  /* .tooltip {
-    position: absolute;
-    left: 100%;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #111;
-    color: #01378f;
-    padding: 10px 14px;
-    border-radius: 6px;
-    font-size: 13px;
-    width: 132px;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.25s ease;
-    z-index: 99999;
-    font-family: sans-serif;
-    font-weight: 600;
-  } */
-
-  /* Arrow */
-  /* .tooltip::after {
-    content: '';
-    position: absolute;
-    top: 45%;
-    left: -12px;
-    transform: translateY(-50%);
-    border-width: 6px;
-    border-style: solid;
-    border-color: transparent rgb(1 55 143) transparent transparent;
-  } */
-
-  /* Show on hover */
-  .membership:hover .tooltip {
-    opacity: 1;
-    visibility: visible;
-  }
-  @media only screen and (min-width: 800px) {
-    .tooltip {
-      width: 300px;
-      font-size: 18px;
-    }
-  }
-</style>
 <style>
   .card-animate {
     animation: cardFadeSlide ease-in-out 0.6s forwards;
@@ -818,10 +744,52 @@
     display: flex;
     justify-content: space-between;
   }
+  .membership-title {
+    text-align: center;
+    line-height: 1.4;
+    margin-bottom: 30px;
+  }
 
+  .pill {
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 18px;
+    font-weight: 800;
+    color: white;
+    margin: 6px 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Colors matching logo */
+  .pill.blue {
+    background: linear-gradient(135deg, #1d7df2, #4db3ff);
+  }
+
+  .pill.green {
+    background: linear-gradient(135deg, #41b649, #7be67f);
+  }
+
+  .pill.orange {
+    background: linear-gradient(135deg, #f28c00, #ffb347);
+  }
+  .membership {
+    /* position: relative; */
+    display: inline-block;
+    margin-bottom: 7px;
+  }
+
+  /* Show on hover */
+  .membership:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+  }
   .card-wrapper {
     display: flex;
     margin: 0 auto;
+  }
+  .arrow-down-icon {
+    margin-left: 20px;
+    transition: transform 0.3s ease;
   }
 
   .day-status-monthly-container,
@@ -976,16 +944,6 @@
   .info-btn-wrapper {
     position: relative;
   }
-
-  /* .info-btn-wrapper:has(.info-btn.active)::after {
-    content: '';
-    border: 14px solid;
-    border-color: transparent transparent transparent
-      var(--arrow-color, #6eee87);
-    position: absolute;
-    top: 3px;
-    right: -27px;
-  } */
 
   @media only screen and (max-width: 800px) {
     .container {
