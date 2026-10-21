@@ -639,13 +639,19 @@
               </span></a
             >in <strong class="header-info-text-detail">Monterey</strong> across
             from Safeway
-
-            <img
-              src="./suv.jpg"
-              alt="Car Wash Menu"
-              style="width: auto; height: auto; display: block; margin: 0 auto"
-            />
           </p>
+          <div class="google-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3200.924491735643!2d-121.6613741!3d36.6522671!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808df85805a6e401%3A0xa8862218049943ec!2s1430%20S%20Main%20St%2C%20Salinas%2C%20CA%2093901%2C%20USA!5e0!3m2!1sen!2siq!4v1792580241322!5m2!1sen!2siq"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              style="border-radius: 20px"
+            ></iframe>
+          </div>
         </section>
         <!-- Why Choose Us -->
         <section class="reveal-left" style="margin-top: 2rem">
@@ -678,6 +684,11 @@
             We look forward to seeing you and having you join our family of
             customers!
           </p>
+          <img
+            src="./suv.jpg"
+            alt="Car Wash Menu"
+            style="width: auto; height: auto; display: block; margin: 0 auto"
+          />
         </section>
       </div>
     </main>
@@ -785,11 +796,14 @@
     margin-bottom: 7px;
   }
 
-  /* Show on hover */
-  .membership:hover .tooltip {
-    opacity: 1;
-    visibility: visible;
+  .google-map {
+    margin-top: 2rem;
+    text-align: center;
   }
+  .google-map iframe {
+    border-radius: 20px;
+  }
+
   .card-wrapper {
     display: flex;
     margin: 0 auto;
