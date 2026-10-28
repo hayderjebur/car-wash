@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Web Page</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script> -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
     <link
       href="https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&display=swap"
       rel="stylesheet"
@@ -18,7 +18,7 @@
       <nav class="navigation">
         <div class="nav-container">
           <div class="brand">
-            <a href="#!"
+            <a href="/"
               ><img src="/logo.webp" alt="Logo" width="150px" height="120px"
             /></a>
           </div>
@@ -34,7 +34,7 @@
               <span class="header-info-text header-info-text-detail"
                 >Phone:</span
               >
-              <a href="tel:+1(818)574-3835">
+              <a href="tel:+1(831)772-6902" class="header-info-text">
                 <span class="header-info-text"> 831-772-6902</span>
               </a>
             </p>
@@ -123,7 +123,7 @@
             >
               <strong>Location 1:</strong>
             </p>
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="/" target="_blank" rel="noopener noreferrer">
               <img
                 src="./logo.webp"
                 alt="Wash & Dash Logo"
@@ -593,8 +593,8 @@
 
           <img
             src="./bmw.jpg"
-            alt="Car Wash Menu"
-            style="width: auto; height: auto; display: block; margin: 0 auto"
+            alt="BMW half washed"
+            style="width: 600px; height: 400px; display: block; margin: 0 auto"
           />
         </section>
         <!--  About Us -->
@@ -633,11 +633,11 @@
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3200.924491735643!2d-121.6613741!3d36.6522671!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808df85805a6e401%3A0xa8862218049943ec!2s1430%20S%20Main%20St%2C%20Salinas%2C%20CA%2093901%2C%20USA!5e0!3m2!1sen!2siq!4v1792580241322!5m2!1sen!2siq"
               width="400"
               height="450"
-              style="border: 0"
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="strict-origin-when-cross-origin"
-              style="border-radius: 20px"
+              style="border-radius: 20px; border: 0"
+              title="Map showing Wash n Dash in Salinas"
             ></iframe>
           </div>
         </section>
@@ -676,7 +676,7 @@
 
           <img
             src="./suv.jpg"
-            alt="Car Wash Menu"
+            alt="SUV half washed"
             style="width: auto; height: auto; display: block; margin: 0 auto"
           />
         </section>
@@ -687,10 +687,6 @@
 <style>
   .card-animate {
     animation: cardFadeSlide ease-in-out 0.3s forwards;
-  }
-  .card-style {
-    border-radius: 12px;
-    margin-top: 0.3rem;
   }
 
   @keyframes cardFadeSlide {
@@ -824,6 +820,11 @@
       #0d41e1 100%
     );
   }
+  .card-style {
+    border-radius: 12px;
+    margin-top: 0.3rem;
+  }
+
   .day-status-single-container {
     background: linear-gradient(120deg, #32cd32, #07c8f9);
   }
@@ -1172,13 +1173,6 @@
       container.style.display = 'none';
       container.classList.add('card-animate');
     });
-    // force reflow so animation can restart
-    // void cardDayStatusDetails[0].offsetWidth;
-    // void cardDayStatusDetails[1].offsetWidth;
-
-    // cardDayStatusDetails.forEach((container) => {
-    //   container.classList.add('card-animate');
-    // });
   }
 
   function activateButton(button) {
@@ -1199,12 +1193,6 @@
     button
       .querySelector('.arrow-down-icon')
       .setAttribute('transform', 'rotate(180)');
-
-    // button
-    //   .getElementByclassName('arrow-down-icon')
-    //   .setAttribute('transform', 'rotate(180)');
-
-    // button.style.width = '50%';
 
     const key = button.getAttribute('data-content');
 
@@ -1250,14 +1238,11 @@
       singleCardTitleBeautifulDay.innerHTML = contentData[key].title;
     } else if (key === 'fantastic-day') {
       fantasticDayDetailsCard.style.display = 'block';
-      // fantasticDayDetailsCard.style.background =
-      //   'linear-gradient(90deg, #5fc52e, #6eee87)';
+
       cardTitleFantasticDay.innerHTML = contentData[key].title;
       cardTextFantasticDay.innerHTML = contentData[key].text;
 
       singleFantasticDayDetailsCard.style.display = 'block';
-      // singleFantasticDayDetailsCard.style.background =
-      //   'linear-gradient(90deg, #5fc52e, #6eee87)';
 
       singleFantasticDayText.innerHTML = contentData[key].text;
       singleCardTitleFantasticDay.innerHTML = contentData[key].title;
@@ -1305,22 +1290,4 @@
   );
 
   revealElements.forEach((el) => observer.observe(el));
-</script>
-<script async>
-  // var animateButton = function (e) {
-  //   e.preventDefault();
-  //   //reset animation
-  //   e.target.classList.remove('animate');
-
-  //   e.target.classList.add('animate');
-  //   setTimeout(function () {
-  //     e.target.classList.remove('animate');
-  //   }, 700);
-  // };
-
-  // var bubblyButtons = document.getElementsByClassName('bubbly-button');
-
-  // for (var i = 0; i < bubblyButtons.length; i++) {
-  //   bubblyButtons[i].addEventListener('click', animateButton, false);
-  // }
 </script>
